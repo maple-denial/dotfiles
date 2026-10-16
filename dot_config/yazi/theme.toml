@@ -1,0 +1,6 @@
+# yazi 主题：与 Neovim 保持一致的 Catppuccin Mocha
+# flavor 本体由 `ya pkg install` 依据 package.toml 安装到 flavors/
+# dark/light 都指向 mocha：避免终端背景色探测失败时被判为 light 而回退默认主题
+[flavor]
+dark  = "catppuccin-mocha"
+light = "catppuccin-mocha"
