@@ -1,0 +1,241 @@
+// niri 配置 —— 由 Home Manager 接管（modules/niri.nix → xdg.configFile），只读符号链接，
+// 要改就改仓库里这个文件再 switch。
+//
+// 两点说明：
+//  1) 第一行 include 是 noctalia 的配色出口：noctalia 会把主题渲染到
+//     ~/.config/niri/noctalia.kdl（那个文件归 noctalia 自己写、可写，不归 HM 管）。
+//     niri 的 include 是位置性的（后面的覆盖前面的），所以放在最前面。
+//     ⚠️ 被 include 的文件必须存在，否则 niri 启动即报错（include 没有 optional）；
+//     modules/niri.nix 里有个 activation 会在缺失时先建一个空文件。
+//  2) binds 整段抄自 niri 自带默认配置（/usr/share/doc/niri/default-config.kdl）：
+//     binds 是少数「省略了就完全没有默认键位」的段落，必须显式写出来。
+//     默认终端由 alacritty 改成 ghostty；与 noctalia IPC 键位重名的默认行已删除
+//     （niri 对重复键位直接报错）。Mod+Comma 保留给 niri 的列操作，
+//     noctalia 设置界面从状态栏 / 控制中心进。
+include "noctalia.kdl"
+
+// 启动 noctalia（Wayland shell：状态栏 / 启动器 / 通知 / 控制中心）
+spawn-at-startup "noctalia"
+
+// 启动 fcitx5（-d = 后台常驻）：niri 会话里不用再每次手动起
+spawn-at-startup "fcitx5" "-d"
+
+// 显示器模式：1920x1080@220Hz（模式串取自 `niri msg outputs` 的 Available modes）。
+// 不写这段时 niri 用显示器的 preferred 模式，也就是 60Hz。
+output "HDMI-A-1" {
+    mode "1920x1080@220.000"
+}
+
+// 允许 noctalia 的通知操作与窗口激活（官方 niri 集成文档要求）
+debug {
+    honor-xdg-activation-with-invalid-serial
+}
+
+// 关键：让 focus-ring / border 只“描边”，不要在窗口背后铺一块实色矩形。
+// niri 默认把 ring 渲染成窗口背后的实心矩形（官方 Layout 文档原话），不透明窗口看不出，
+// 但 Ghostty 这类半透明窗口会把那块颜色整片透出来 —— 就是“选中窗口背后变蓝”的原因。
+// 默认的 border { off } 保持不变，只留 4px 蓝色 focus-ring 作为边框。
+window-rule {
+    draw-border-with-background false
+}
+
+// 圆角窗口（20 太圆，改成 8；想再调就改这个数值）；noctalia 的设置窗口以浮动窗口打开
+window-rule {
+    geometry-corner-radius 8
+    clip-to-geometry true
+}
+window-rule {
+    match app-id="dev.noctalia.Noctalia"
+    open-floating true
+    default-column-width { fixed 1080; }
+    default-window-height { fixed 920; }
+}
+binds {
+
+
+    Mod+Shift+Slash { show-hotkey-overlay; }
+
+    Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    //Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    //Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+
+    //Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
+
+    XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+
+    XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
+    XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
+    XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
+
+
+
+    Mod+Q repeat=false { close-window; }
+
+    Mod+Left  { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+H     { focus-column-left; }
+    Mod+J     { focus-window-down; }
+    Mod+K     { focus-window-up; }
+    Mod+L     { focus-column-right; }
+
+    Mod+Ctrl+Left  { move-column-left; }
+    Mod+Ctrl+Down  { move-window-down; }
+    Mod+Ctrl+Up    { move-window-up; }
+    Mod+Ctrl+Right { move-column-right; }
+    Mod+Ctrl+H     { move-column-left; }
+    Mod+Ctrl+J     { move-window-down; }
+    Mod+Ctrl+K     { move-window-up; }
+    Mod+Ctrl+L     { move-column-right; }
+
+
+    Mod+Home { focus-column-first; }
+    Mod+End  { focus-column-last; }
+    Mod+Ctrl+Home { move-column-to-first; }
+    Mod+Ctrl+End  { move-column-to-last; }
+
+    Mod+Shift+Left  { focus-monitor-left; }
+    Mod+Shift+Down  { focus-monitor-down; }
+    Mod+Shift+Up    { focus-monitor-up; }
+    Mod+Shift+Right { focus-monitor-right; }
+    Mod+Shift+H     { focus-monitor-left; }
+    Mod+Shift+J     { focus-monitor-down; }
+    Mod+Shift+K     { focus-monitor-up; }
+    Mod+Shift+L     { focus-monitor-right; }
+
+    Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
+    Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
+    Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
+    Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
+    Mod+Shift+Ctrl+H     { move-column-to-monitor-left; }
+    Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
+    Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
+    Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
+
+
+
+    Mod+Page_Down      { focus-workspace-down; }
+    Mod+Page_Up        { focus-workspace-up; }
+    Mod+U              { focus-workspace-down; }
+    Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
+    Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
+    Mod+Ctrl+U         { move-column-to-workspace-down; }
+    Mod+Ctrl+I         { move-column-to-workspace-up; }
+
+
+    Mod+Shift+Page_Down { move-workspace-down; }
+    Mod+Shift+Page_Up   { move-workspace-up; }
+    Mod+Shift+U         { move-workspace-down; }
+    Mod+Shift+I         { move-workspace-up; }
+
+    Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
+    Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
+    Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
+
+    Mod+WheelScrollRight      { focus-column-right; }
+    Mod+WheelScrollLeft       { focus-column-left; }
+    Mod+Ctrl+WheelScrollRight { move-column-right; }
+    Mod+Ctrl+WheelScrollLeft  { move-column-left; }
+
+    Mod+Shift+WheelScrollDown      { focus-column-right; }
+    Mod+Shift+WheelScrollUp        { focus-column-left; }
+    Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
+    Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
+
+
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+Ctrl+1 { move-column-to-workspace 1; }
+    Mod+Ctrl+2 { move-column-to-workspace 2; }
+    Mod+Ctrl+3 { move-column-to-workspace 3; }
+    Mod+Ctrl+4 { move-column-to-workspace 4; }
+    Mod+Ctrl+5 { move-column-to-workspace 5; }
+    Mod+Ctrl+6 { move-column-to-workspace 6; }
+    Mod+Ctrl+7 { move-column-to-workspace 7; }
+    Mod+Ctrl+8 { move-column-to-workspace 8; }
+    Mod+Ctrl+9 { move-column-to-workspace 9; }
+
+
+
+    Mod+BracketLeft  { consume-or-expel-window-left; }
+    Mod+BracketRight { consume-or-expel-window-right; }
+
+
+
+    Mod+Ctrl+Shift+R { switch-preset-window-height; }
+    Mod+Ctrl+R { reset-window-height; }
+
+
+    Mod+M { maximize-window-to-edges; }
+
+    Mod+Ctrl+F { expand-column-to-available-width; }
+
+
+    Mod+Ctrl+C { center-visible-columns; }
+
+    Mod+Equal { set-column-width "+10%"; }
+
+    Mod+Shift+Equal { set-window-height "+10%"; }
+
+    Mod+V       { toggle-window-floating; }
+    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+
+    Mod+W { toggle-column-tabbed-display; }
+
+
+    Print { screenshot; }
+    Ctrl+Print { screenshot-screen; }
+    Alt+Print { screenshot-window; }
+
+    // Mod+Escape 让给 noctalia 的 session 菜单（见下面 IPC 段）；
+    // 原本的“切换快捷键抑制”挪到 Mod+Shift+Escape，功能不丢。
+    Mod+Shift+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+    Mod+Shift+E { quit; }
+    Ctrl+Alt+Delete { quit; }
+
+    Mod+Shift+P { power-off-monitors; }
+
+    // --- noctalia IPC 键位（官方 niri 集成文档；Mod+Comma 留给 niri）---
+    Mod+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Alt+Tab { spawn-sh "noctalia msg window-switcher hold"; }
+    XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
+    XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
+    XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
+    XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
+    XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
+    // session 菜单：锁定 / 挂起 / 注销 / 重启 / 关机
+    // （等价于 `noctalia msg panel-toggle session`；单独执行某个动作是 `noctalia msg session <lock|suspend|logout|reboot|shutdown>`）
+    Mod+Escape { spawn-sh "noctalia msg panel-toggle session"; }
+
+    // --- PaperWM 同步的窗口管理键位（键位取自 dconf 里的 paperwm.keybindings）---
+    Mod+BackSpace { close-window; }
+    Mod+Return { spawn "ghostty"; }
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+    Mod+Comma { focus-column-left; }
+    Mod+Period { focus-column-right; }
+    Mod+Up { focus-window-up; }
+    Mod+Down { focus-window-down; }
+    Mod+C { center-column; }
+    Mod+I { consume-window-into-column; }
+    Mod+O { expel-window-from-column; }
+    Mod+Shift+O { expel-window-from-column; }
+    Mod+R { switch-preset-column-width; }
+    Mod+Shift+R { switch-preset-window-height; }
+    Mod+Plus { set-column-width "+10%"; }
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Shift+Plus { set-window-height "+10%"; }
+    Mod+Shift+Minus { set-window-height "-10%"; }
+    Mod+Tab { spawn-sh "noctalia msg window-switcher hold"; }
+    Mod+Grave { toggle-overview; }
+}
