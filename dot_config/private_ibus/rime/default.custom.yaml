@@ -1,0 +1,7 @@
+# 注意，一个文件中只能有一个 patch
+patch:
+  schema_list:
+    - schema: rime_mint_flypy      # 薄荷拼音-小鹤混输方案
+  menu:
+     # 候选词个数
+    page_size: 5

@@ -12,6 +12,6 @@ set -gx HOMEBREW_BOTTLE_DOMAIN "https://mirrors.ustc.edu.cn/homebrew-bottles"
 set -gx HOMEBREW_NO_ANALYTICS 1
 
 
-set -gx EDITOR code
+set -gx EDITOR nvim
 set -gx VISUAL nvim
 fish_add_path ~/.local/bin
