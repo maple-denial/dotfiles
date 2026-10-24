@@ -1,5 +1,6 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    zoxide init fish | source
     starship init fish | source
 end
 
@@ -15,4 +16,5 @@ set -gx EDITOR nvim
 set -gx VISUAL nvim
 fish_add_path ~/.local/bin
 #rustup
-source "$HOME/.cargo/env.fish"
+test -f "$HOME/.cargo/env.fish"; and source "$HOME/.cargo/env.fish"
+
