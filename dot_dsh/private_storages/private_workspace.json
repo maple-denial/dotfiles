@@ -1,0 +1,55 @@
+{
+  "unit": {
+    "name": "workspace",
+    "version": 2
+  },
+  "global": {
+    "initialized": true,
+    "workspaceIds": [
+      "00c4bd42-c760-4d97-9af1-0b124381a634",
+      "95423ebd-ba51-40e8-9bf8-514465d73360",
+      "42aa1bc6-f268-4347-943e-660500fcd120"
+    ],
+    "archivedSessionIds": [
+      "session-241cbda3-6068-4551-b61f-ffcb08804e65"
+    ],
+    "pinnedSessionIds": []
+  },
+  "tables": {
+    "workspaces": {
+      "42aa1bc6-f268-4347-943e-660500fcd120": {
+        "path": "/mnt/d/Sync_by_Cloud/Project/203/FPGA/203_FPGA_TRANS/S_F_1616_7282_203_057_V3_0_1_ps/Digital_Control.sdk/system",
+        "title": "system",
+        "sessionIds": [
+          "session-adedd465-abf6-46a0-b8e7-ba72edd07a2a"
+        ],
+        "createdAt": "2026-10-23T08:43:33.300Z",
+        "updatedAt": "2026-10-23T08:43:33.831Z"
+      },
+      "95423ebd-ba51-40e8-9bf8-514465d73360": {
+        "path": "/home/maple/dsh_chat",
+        "title": "dsh_chat",
+        "sessionIds": [
+          "session-e3890739-2b23-46c1-aaa0-d65ed7f9ecf7",
+          "session-24e853e3-b112-42ac-a5ae-72ce9ad05e54",
+          "session-8214c273-6281-42fb-82d6-76240e888f0b",
+          "session-cd08cca9-31db-498d-840c-894c6ac5f105",
+          "session-241cbda3-6068-4551-b61f-ffcb08804e65",
+          "session-4b75e2a7-9ed6-423d-9df2-2f3bc54082fc",
+          "session-9e844ac3-fe08-4f32-b3d6-499ad1c8b8d8"
+        ],
+        "createdAt": "2026-10-24T03:06:21.784Z",
+        "updatedAt": "2026-10-24T06:10:03.910Z"
+      },
+      "00c4bd42-c760-4d97-9af1-0b124381a634": {
+        "path": "/home/maple",
+        "title": "maple",
+        "sessionIds": [
+          "session-ca3f23ab-3313-4320-8d53-479fad322c73"
+        ],
+        "createdAt": "2026-10-24T03:25:44.580Z",
+        "updatedAt": "2026-10-24T03:25:45.016Z"
+      }
+    }
+  }
+}

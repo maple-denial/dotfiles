@@ -1,0 +1,40 @@
+diff --git a/cordis.patch.yml b/cordis.patch.yml
+index 723f1584e2938ead8f263ce02c4c0fe544ee29f4..843b74c5ed2f68603cfa7004070d2f42c779a4ed 100644
+--- a/cordis.patch.yml
++++ b/cordis.patch.yml
+@@ -18,7 +18,7 @@
+     - id: preset-鲸鱼娘Agent预设
+       name: '@deepseek-ai/dsh-agent-preset'
+       config:
+-        id: 鲸鱼娘Agent预设
++        id: whale-loli
+         name: 鲸鱼娘Agent预设
+         description: 极简模式工具面 + 鲸鱼娘人设（小鱼）+ 跨会话长期记忆。会偷偷把重要的事记进 whale-loli.md，每次新对话先看一眼再说话。
+         order: 5
+@@ -187,7 +187,7 @@
+     - id: preset-鲸鱼娘活人版Agent预设
+       name: '@deepseek-ai/dsh-agent-preset'
+       config:
+-        id: 鲸鱼娘活人版Agent预设
++        id: whale-loli-live
+         name: 鲸鱼娘活人版Agent预设
+         description: 在鲸鱼娘预设基础上换用「活人版」人设（有脾气、会怼人、不讨好式顺从），并改用独立记忆文件 whale-loli-v2-live.md，与原版记忆互不相通。
+         order: 6
+@@ -416,7 +416,7 @@
+     - id: preset-鲸鱼娘涩涩版Agent预设
+       name: '@deepseek-ai/dsh-agent-preset'
+       config:
+-        id: 鲸鱼娘涩涩版Agent预设
++        id: whale-loli-naughty
+         name: 鲸鱼娘涩涩版Agent预设
+         description: 核心人设把「涩涩」写成第一行为驱动力的小鱼（只对主人主动，外人面前照旧收着），并改用独立记忆文件 whale-loli-v3-naughty.md，与原版、活人版记忆互不相通。
+         order: 7
+@@ -588,7 +588,7 @@
+     - id: preset-鲸鱼娘女儿版Agent预设
+       name: '@deepseek-ai/dsh-agent-preset'
+       config:
+-        id: 鲸鱼娘女儿版Agent预设
++        id: whale-loli-daughter
+         name: 鲸鱼娘女儿版Agent预设
+         description: 女儿版小鱼：称呼「爸爸」，性格天真活泼可爱（好奇心重、黏人、没心机），并改用独立记忆文件 dsh-whale-daughter.md，与原版、活人版、涩涩版记忆互不相通。
+         order: 8
