@@ -25,7 +25,7 @@ fi
 
 unset rc
 # default editor
-export EDITOR=code
+export EDITOR=nvim
 export VISUAL=nvim
 # uv 
 export PATH="~/.local/bin:$PATH"
@@ -34,6 +34,10 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
 
 
 eval "$(zoxide init bash)"
-eval -- "$(/home/linuxbrew/.linuxbrew/bin/starship init bash --print-full-init)"
+
+
+eval -- "$(starship init bash --print-full-init)"
+
+
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
 export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
