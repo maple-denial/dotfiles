@@ -1,9 +1,9 @@
 #!/bin/sh
 # 同步 GNOME 扩展设置（dconf 文本后端）。
 #
-# 设置改动后，重新导出到 chezmoi 源即可（下次 apply 会自动加载）：
-#   dconf dump /org/gnome/shell/extensions/ \
-#     > ~/.local/share/chezmoi/.chezmoitemplates/gnome-extensions.dconf
+# 设置改动后，运行 gnome-ext-export 重新导出（会自动过滤显示器/工作区等
+# 机器相关的键），下次 apply 会自动加载：
+#   gnome-ext-export
 #
 # 下面两行哈希让本脚本只在导出内容变化时重跑：
 # {{ include ".chezmoitemplates/gnome-extensions.dconf" | sha256sum }}

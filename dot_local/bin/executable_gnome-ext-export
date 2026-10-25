@@ -1,0 +1,48 @@
+#!/bin/sh
+# 导出 GNOME 扩展设置到 chezmoi 源（文本），并过滤掉与具体机器相关的键。
+#
+# 用法：gnome-ext-export
+# 之后 chezmoi apply 会通过 run_onchange 脚本把文本加载回 dconf。
+set -eu
+
+SRC="${CHEZMOI_SOURCE_DIR:-$(chezmoi source-path 2>/dev/null || echo "$HOME/.local/share/chezmoi")}"
+TPL="$SRC/.chezmoitemplates"
+mkdir -p "$TPL"
+
+# -- 过滤规则 ---------------------------------------------------------------
+# 跳过整个段：paperwm/workspaces 及其子段（工作区 UUID、index 属于运行时状态）
+# 跳过指定键：显示器相关的 preferred-monitor / preferred-monitor-by-connector
+dconf dump /org/gnome/shell/extensions/ | python3 -c '
+import sys
+
+skip_sections = {"paperwm/workspaces"}
+skip_section_prefixes = ("paperwm/workspaces/",)
+skip_keys = {"preferred-monitor", "preferred-monitor-by-connector"}
+
+out = []
+skip = False
+for line in sys.stdin:
+    s = line.strip()
+    if s.startswith("[") and s.endswith("]"):
+        name = s[1:-1].strip()
+        skip = name in skip_sections or name.startswith(skip_section_prefixes)
+        if not skip:
+            out.append(line)
+        continue
+    if skip:
+        continue
+    key = s.split("=", 1)[0].strip()
+    if key in skip_keys:
+        continue
+    out.append(line)
+sys.stdout.write("".join(out))
+' > "$TPL/gnome-extensions.dconf"
+
+{
+    echo "[/]"
+    echo "enabled-extensions=$(gsettings get org.gnome.shell enabled-extensions)"
+    echo "disabled-extensions=$(gsettings get org.gnome.shell disabled-extensions)"
+} > "$TPL/gnome-shell-list.dconf"
+
+printf '已导出：\n  %s\n  %s\n' \
+    "$TPL/gnome-extensions.dconf" "$TPL/gnome-shell-list.dconf"

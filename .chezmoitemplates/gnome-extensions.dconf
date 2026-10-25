@@ -49,7 +49,7 @@ disable-hljs-dialog=false
 [customize-ibus]
 candidate-opacity=uint32 255
 candidate-popup-animation=uint32 1
-custom-font='Maple Mono 16'
+custom-font='Maple Mono NF CN 16'
 enable-orientation=true
 input-mode-list={'null': false, 'org.gnome.shell.extensions': true, 'com.mattjakeman.extensionmanager': true, 'qq': false, 'org.gnome.nautilus': true, 'undefined': false, 'org.mozilla.firefox': true}
 use-candidate-opacity=false
@@ -64,8 +64,6 @@ dock-fixed=true
 dock-position='LEFT'
 extend-height=true
 height-fraction=0.90000000000000002
-preferred-monitor=-2
-preferred-monitor-by-connector='HDMI-1'
 
 [nightthemeswitcher/commands]
 enabled=false
@@ -100,18 +98,6 @@ selection-border-size=5
 vertical-margin=10
 vertical-margin-bottom=10
 window-gap=10
-
-[paperwm/workspaces]
-list=['a61f72d9-9c3f-44f1-bdee-3551a0f30ec8', 'e0e6f654-a9f7-4d90-936b-8467e0534f39', '3653181e-6eb5-44de-8a04-e8c35bc361e4']
-
-[paperwm/workspaces/3653181e-6eb5-44de-8a04-e8c35bc361e4]
-index=2
-
-[paperwm/workspaces/a61f72d9-9c3f-44f1-bdee-3551a0f30ec8]
-index=0
-
-[paperwm/workspaces/e0e6f654-a9f7-4d90-936b-8467e0534f39]
-index=1
 
 [vitals]
 battery-colors=@as []
