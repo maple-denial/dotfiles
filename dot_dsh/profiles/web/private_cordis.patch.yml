@@ -8,11 +8,16 @@
 - id: agent-default-model
   name: "@deepseek-ai/dsh-agent-default-model"
   config:
-    provider: deepseek-account
-    model: deepseek-flash
-    reasoningEffort: high
+    provider: xiaomi-token-plan-cn
+    model: mimo-v2.6-flash
 - id: agent-preset-registry
   name: "@deepseek-ai/dsh-agent-preset-registry"
   config:
     default: standard
     selectedDefault: standard
+- id: llm-pi-ai
+  name: "@deepseek-ai/dsh-llm-pi-ai"
+  config:
+    providers:
+      xiaomi-token-plan-cn:
+        apiKeyEnv: XIAOMI_TOKEN_PLAN_CN_API_KEY

@@ -1,0 +1,12 @@
+{"at":"2026-10-25T03:46:44.661Z","level":"info","event":"region","detail":"no region on record; network check chose global"}
+{"at":"2026-10-26T16:23:13.048Z","level":"info","event":"update-start","detail":"@michengai/dsh-im-connect -> @michengai/dsh-im-connect@1.0.18 (profile web)"}
+{"at":"2026-10-26T16:23:17.233Z","level":"info","event":"update","detail":"@michengai/dsh-im-connect -> @michengai/dsh-im-connect@1.0.18 exit=0"}
+{"at":"2026-10-26T16:23:17.728Z","level":"info","event":"update-start","detail":"dsh-cost-meter -> dsh-cost-meter@1.9.41 (profile web)"}
+{"at":"2026-10-26T16:23:21.000Z","level":"info","event":"update","detail":"dsh-cost-meter -> dsh-cost-meter@1.9.41 exit=0"}
+{"at":"2026-10-26T16:23:21.225Z","level":"info","event":"update-start","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 (profile web)"}
+{"at":"2026-10-26T16:23:29.308Z","level":"info","event":"update-rollback","detail":"dsh-whale-loli: restored npm build v0.9.17"}
+{"at":"2026-10-26T16:23:29.309Z","level":"warn","event":"update","detail":"dsh-whale-loli: failed update command; previous build restored and verified"}
+{"at":"2026-10-26T16:23:29.309Z","level":"error","event":"update","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 exit=1 err=… The usual cause is the package moving the file the patch targets (for example a patch against client/client.js when the release now ships lib/client.js). Update or remove that patch file and its entry under pnpm.patchedDependencies in the profile's package.json"}
+{"at":"2026-10-26T16:24:33.024Z","level":"info","event":"update-start","detail":"dshmarket -> dshmarket@1.70.2 (profile web)"}
+{"at":"2026-10-26T16:24:34.395Z","level":"info","event":"update","detail":"dshmarket -> dshmarket@1.70.2 exit=0"}
+{"at":"2026-10-26T16:24:35.984Z","level":"info","event":"restart","detail":"scheduled pid=8390 helper=16355 recovery=/tmp/dsh-market-restart-2026-10-26T16-24-35.recovery.json"}

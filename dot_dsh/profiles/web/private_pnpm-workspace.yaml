@@ -4,8 +4,8 @@ packages:
 nodeLinker: hoisted
 autoInstallPeers: false
 minimumReleaseAgeExclude:
-  - dsh-cost-meter@1.9.28 || 1.9.31
-  - '@michengai/dsh-im-connect@1.0.14'
+  - dsh-cost-meter@1.9.28 || 1.9.31 || 1.9.41
+  - '@michengai/dsh-im-connect@1.0.14 || 1.0.18'
   - dshmarket@1.70.1
   - '@xmanrui/dsh-im@5.6.0'
 allowBuilds:

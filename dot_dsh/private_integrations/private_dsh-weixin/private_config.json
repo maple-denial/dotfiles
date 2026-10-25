@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "accounts": [
+    {
+      "botId": "wx_6aac1ff537dea0999a8995e2",
+      "accountId": "f74bc80b8d70@im.bot",
+      "tokenRef": "DSH_WEIXIN_BOT_TOKEN_6AAC1FF537DEA0999A8995E2",
+      "ownerUserId": "o9cq80xfiB3e4q0TCdRdVtgsaYms@im.wechat",
+      "baseUrl": "https://ilinkai.weixin.qq.com/",
+      "createdAt": "2026-10-26T16:22:08.303Z",
+      "connectedAt": "2026-10-26T16:22:08.303Z"
+    }
+  ]
+}

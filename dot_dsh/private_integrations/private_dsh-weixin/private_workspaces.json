@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "workspaces": {
+    "wx_6aac1ff537dea0999a8995e2": "/var/home/maple/.dsh/im"
+  },
+  "agentPresets": {
+    "wx_6aac1ff537dea0999a8995e2": "whale-loli-live"
+  },
+  "accessPolicies": {
+    "wx_6aac1ff537dea0999a8995e2": {
+      "direct": {
+        "mode": "allowlist",
+        "open": {
+          "defaultCanExecuteCommands": false,
+          "commandPermissionOverrides": []
+        },
+        "allowlist": {
+          "users": []
+        }
+      },
+      "group": {
+        "mode": "allowlist",
+        "open": {
+          "defaultCanExecuteCommands": false,
+          "commandPermissionOverrides": []
+        },
+        "allowlist": {
+          "users": []
+        }
+      }
+    }
+  }
+}

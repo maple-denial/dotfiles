@@ -1,0 +1,36 @@
+2026-10-25T03:46:44.221Z [interaction] 已接管 userQuestions service 的 IM 会话
+2026-10-25T03:46:44.229Z [boot] ChannelManager 构造 10ms
+2026-10-25T03:46:44.230Z [manager] API 已注册 /api/dsh-im-connect
+2026-10-25T03:46:44.230Z [boot] apply 完成 11ms
+2026-10-25T03:46:44.235Z [boot] initEnabled 1ms
+2026-10-25T03:46:44.589Z [boot] attachMappedSessions 353ms
+2026-10-25T09:17:57.490Z [interaction] 已接管 userQuestions service 的 IM 会话
+2026-10-25T09:17:57.498Z [boot] ChannelManager 构造 10ms
+2026-10-25T09:17:57.499Z [manager] API 已注册 /api/dsh-im-connect
+2026-10-25T09:17:57.499Z [boot] apply 完成 11ms
+2026-10-25T09:17:57.504Z [boot] initEnabled 2ms
+2026-10-25T09:17:57.816Z [boot] attachMappedSessions 311ms
+2026-10-25T15:16:48.535Z [interaction] 已接管 userQuestions service 的 IM 会话
+2026-10-25T15:16:48.542Z [boot] ChannelManager 构造 9ms
+2026-10-25T15:16:48.543Z [manager] API 已注册 /api/dsh-im-connect
+2026-10-25T15:16:48.543Z [boot] apply 完成 10ms
+2026-10-25T15:16:48.549Z [boot] initEnabled 2ms
+2026-10-25T15:16:48.872Z [boot] attachMappedSessions 322ms
+2026-10-26T16:21:45.868Z [interaction] 已接管 userQuestions service 的 IM 会话
+2026-10-26T16:21:45.871Z [boot] ChannelManager 构造 5ms
+2026-10-26T16:21:45.872Z [manager] API 已注册 /api/dsh-im-connect
+2026-10-26T16:21:45.872Z [boot] apply 完成 6ms
+2026-10-26T16:21:45.877Z [boot] initEnabled 2ms
+2026-10-26T16:21:46.175Z [boot] attachMappedSessions 298ms
+2026-10-26T16:24:40.597Z [interaction] 已接管 userQuestions service 的 IM 会话
+2026-10-26T16:24:40.604Z [boot] ChannelManager 构造 9ms
+2026-10-26T16:24:40.606Z [manager] API 已注册 /api/dsh-im-connect
+2026-10-26T16:24:40.606Z [boot] apply 完成 11ms
+2026-10-26T16:24:40.612Z [boot] initEnabled 2ms
+2026-10-26T16:24:40.964Z [boot] attachMappedSessions 352ms
+2026-10-27T00:58:11.937Z [interaction] 已接管 userQuestions service 的 IM 会话
+2026-10-27T00:58:11.944Z [boot] ChannelManager 构造 9ms
+2026-10-27T00:58:11.945Z [manager] API 已注册 /api/dsh-im-connect
+2026-10-27T00:58:11.945Z [boot] apply 完成 10ms
+2026-10-27T00:58:11.951Z [boot] initEnabled 3ms
+2026-10-27T00:58:12.255Z [boot] attachMappedSessions 304ms
