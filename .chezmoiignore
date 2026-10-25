@@ -1,2 +1,5 @@
 # DSH 运行时状态（工作区列表等），与机器/会话相关，不纳入 dotfiles
 .dsh/storages/
+
+# pnpm 依赖目录：体积大、可由 package.json + lockfile 重建
+.dsh/profiles/*/node_modules/
