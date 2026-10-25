@@ -1,0 +1,3 @@
+[/]
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'no-overview@fthx', 'dash-to-dock@micxgx.gmail.com', 'blur-my-shell@aunetx', 'Vitals@CoreCoding.com', 'caffeine@patapon.info', 'paperwm@paperwm.github.com', 'copyous@boerdereinar.dev', 'ddterm@amezin.github.com', 'nowplaying@epogonii.github.io', 'nightthemeswitcher@romainvigier.fr', 'context-window-title@erikis.github.io', 'customize-ibus@hollowman.ml']
+disabled-extensions=@as []

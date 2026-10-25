@@ -1,0 +1,39 @@
+#!/bin/sh
+# 同步 GNOME 扩展设置（dconf 文本后端）。
+#
+# 设置改动后，重新导出到 chezmoi 源即可（下次 apply 会自动加载）：
+#   dconf dump /org/gnome/shell/extensions/ \
+#     > ~/.local/share/chezmoi/.chezmoitemplates/gnome-extensions.dconf
+#
+# 下面两行哈希让本脚本只在导出内容变化时重跑：
+# {{ include ".chezmoitemplates/gnome-extensions.dconf" | sha256sum }}
+# {{ include ".chezmoitemplates/gnome-shell-list.dconf" | sha256sum }}
+set -u
+
+if ! command -v dconf >/dev/null 2>&1; then
+    echo "警告：未找到 dconf，跳过 GNOME 扩展设置同步" >&2
+    exit 0
+fi
+
+# 各扩展自身的偏好设置
+dconf load /org/gnome/shell/extensions/ <<'DSH_GNOME_EXT_EOF'
+{{ include ".chezmoitemplates/gnome-extensions.dconf" }}
+DSH_GNOME_EXT_EOF
+
+# 启用/禁用扩展列表
+dconf load /org/gnome/shell/ <<'DSH_GNOME_LIST_EOF'
+{{ include ".chezmoitemplates/gnome-shell-list.dconf" }}
+DSH_GNOME_LIST_EOF
+
+# 提醒：列表里缺失的扩展本体需要单独安装
+missing=""
+for uuid in $(dconf read /org/gnome/shell/enabled-extensions | tr -d "[]' " | tr ',' ' '); do
+    [ -d "$HOME/.local/share/gnome-shell/extensions/$uuid" ] \
+        || [ -d "/usr/share/gnome-shell/extensions/$uuid" ] \
+        || missing="$missing $uuid"
+done
+if [ -n "$missing" ]; then
+    echo "提示：以下扩展已启用但尚未安装，请另行安装：$missing" >&2
+fi
+
+exit 0
