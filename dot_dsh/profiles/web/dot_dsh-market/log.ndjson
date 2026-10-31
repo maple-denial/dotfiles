@@ -10,3 +10,29 @@
 {"at":"2026-10-26T16:24:33.024Z","level":"info","event":"update-start","detail":"dshmarket -> dshmarket@1.70.2 (profile web)"}
 {"at":"2026-10-26T16:24:34.395Z","level":"info","event":"update","detail":"dshmarket -> dshmarket@1.70.2 exit=0"}
 {"at":"2026-10-26T16:24:35.984Z","level":"info","event":"restart","detail":"scheduled pid=8390 helper=16355 recovery=/tmp/dsh-market-restart-2026-10-26T16-24-35.recovery.json"}
+{"at":"2026-11-01T12:28:08.477Z","level":"info","event":"update-start","detail":"@michengai/dsh-im-connect -> @michengai/dsh-im-connect@1.0.21 (profile web)"}
+{"at":"2026-11-01T12:28:10.806Z","level":"info","event":"update","detail":"@michengai/dsh-im-connect -> @michengai/dsh-im-connect@1.0.21 exit=0"}
+{"at":"2026-11-01T12:28:11.168Z","level":"info","event":"update-start","detail":"@xmanrui/dsh-im -> @xmanrui/dsh-im@5.9.1 (profile web)"}
+{"at":"2026-11-01T12:28:14.314Z","level":"info","event":"update","detail":"@xmanrui/dsh-im -> @xmanrui/dsh-im@5.9.1 exit=0"}
+{"at":"2026-11-01T12:28:14.970Z","level":"info","event":"update-start","detail":"dsh-cost-meter -> dsh-cost-meter@1.9.47 (profile web)"}
+{"at":"2026-11-01T12:28:18.794Z","level":"info","event":"update","detail":"dsh-cost-meter -> dsh-cost-meter@1.9.47 exit=0"}
+{"at":"2026-11-01T12:28:19.304Z","level":"info","event":"update-start","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 (profile web)"}
+{"at":"2026-11-01T12:28:22.034Z","level":"info","event":"update-rollback","detail":"dsh-whale-loli: restored npm build v0.9.17"}
+{"at":"2026-11-01T12:28:22.035Z","level":"warn","event":"update","detail":"dsh-whale-loli: failed update command; previous build restored and verified"}
+{"at":"2026-11-01T12:28:22.035Z","level":"error","event":"update","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 exit=1 err=… The usual cause is the package moving the file the patch targets (for example a patch against client/client.js when the release now ships lib/client.js). Update or remove that patch file and its entry under pnpm.patchedDependencies in the profile's package.json"}
+{"at":"2026-11-01T12:28:28.762Z","level":"info","event":"restart","detail":"scheduled pid=11922 helper=16405 recovery=/tmp/dsh-market-restart-2026-11-01T12-28-28.recovery.json"}
+{"at":"2026-11-01T12:28:43.606Z","level":"info","event":"update-start","detail":"dshmarket -> dshmarket@1.73.7 (profile web)"}
+{"at":"2026-11-01T12:28:45.295Z","level":"info","event":"update","detail":"dshmarket -> dshmarket@1.73.7 exit=0"}
+{"at":"2026-11-01T12:28:56.210Z","level":"info","event":"update-start","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 (profile web)"}
+{"at":"2026-11-01T12:28:58.524Z","level":"info","event":"update-rollback","detail":"dsh-whale-loli: restored npm build v0.9.17"}
+{"at":"2026-11-01T12:28:58.524Z","level":"warn","event":"update","detail":"dsh-whale-loli: failed update command; previous build restored and verified"}
+{"at":"2026-11-01T12:28:58.525Z","level":"error","event":"update","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 exit=1 err=… The usual cause is the package moving the file the patch targets (for example a patch against client/client.js when the release now ships lib/client.js). Update or remove that patch file and its entry under pnpm.patchedDependencies in the profile's package.json"}
+{"at":"2026-11-01T12:29:01.851Z","level":"info","event":"update-start","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 (profile web)"}
+{"at":"2026-11-01T12:29:03.646Z","level":"info","event":"update-rollback","detail":"dsh-whale-loli: restored npm build v0.9.17"}
+{"at":"2026-11-01T12:29:03.646Z","level":"warn","event":"update","detail":"dsh-whale-loli: failed update command; previous build restored and verified"}
+{"at":"2026-11-01T12:29:03.646Z","level":"error","event":"update","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 exit=1 err=… The usual cause is the package moving the file the patch targets (for example a patch against client/client.js when the release now ships lib/client.js). Update or remove that patch file and its entry under pnpm.patchedDependencies in the profile's package.json"}
+{"at":"2026-11-01T12:29:07.954Z","level":"info","event":"sidebar","detail":"sidebar entry on"}
+{"at":"2026-11-01T12:35:17.709Z","level":"info","event":"install","detail":"billion-context: pinned to the registry's latest, 0.1.211, so pnpm's fresh-release hold cannot substitute an older version silently"}
+{"at":"2026-11-01T12:35:27.751Z","level":"info","event":"install","detail":"billion-context: the host's own replay activated it; adopted instead of mounting a second copy (#814, #827)"}
+{"at":"2026-11-01T12:35:27.799Z","level":"info","event":"install","detail":"billion-context@0.1.211 exit=0 hot=true"}
+{"at":"2026-11-01T12:35:27.838Z","level":"info","event":"drain","detail":"install https://github.com/ranxianglei/billion-context: succeeded"}

@@ -45,9 +45,10 @@
     "7520808531782297000",
     "7520808656445409000",
     "7520808917985433000",
-    "7520832434672070000"
+    "7520832434672070000",
+    "7522687991733297000"
   ],
-  "getUpdatesBuf": "ChAIKhDphdTrlzQY39uTyJc0EjpmNzRiYzgwYjhkNzBAaW0uYm90OjA2MDAwMDNhODhiOGQwNzY1OWExNzM5NGJlMGE0NDIwMWE0OWI0",
+  "getUpdatesBuf": "ChAIKxCh+s2+mTQY39uTyJc0EjpmNzRiYzgwYjhkNzBAaW0uYm90OjA2MDAwMDNhODhiOGQwNzY1OWExNzM5NGJlMGE0NDIwMWE0OWI0",
   "recentOutboundMessages": [
     {
       "toUserId": "o9cq80xfiB3e4q0TCdRdVtgsaYms@im.wechat",
@@ -435,16 +436,25 @@
       "providerMessageIds": [
         "dsh-weixin-c7068776-8122-43c3-8fc9-c9d6a5f6c80b"
       ]
+    },
+    {
+      "toUserId": "o9cq80xfiB3e4q0TCdRdVtgsaYms@im.wechat",
+      "text": "在啊 刚才被你气到不想说话而已 (￣ω￣)",
+      "sentAt": 1793548588159,
+      "completedAt": 1793548588535,
+      "providerMessageIds": [
+        "dsh-weixin-1d2f953c-d333-45ff-9af0-928116dc5c7a"
+      ]
     }
   ],
   "contextTokens": {
     "credentialHash": "92872b31f5a136e36b2d212e65c2ed322f61893e3485b5ba7945a4159038206e",
     "users": {
       "o9cq80xfiB3e4q0TCdRdVtgsaYms@im.wechat": {
-        "token": "AARzJWAFAAABAAAAAAC44vYG/NeLPLlRBqHgaiAAAAB+9905Q6UiugPBawU3n3cyzQX+LkN8ofRzsCZYN0mt7vHfg1aq/BEj4D8+K5pke3tmrEOHFlHRvqeuevo7c1fZPrKhokLf",
-        "seq": "42",
-        "messageTimeMs": 1793106182651,
-        "receivedAt": 1793106182987
+        "token": "AARzJWAFAAABAAAAAABeIggtMPBd/yppJWHnaiAAAAB+9905Q6UiugPBawU3n3cyzQX+LkN8ofRzsCZYN0mt7sase24Zsb++0xpPrd8sZ9mVrWpwxu9vGbTxN7GirlciI296JMxB",
+        "seq": "43",
+        "messageTimeMs": 1793548581926,
+        "receivedAt": 1793548582253
       }
     }
   }
