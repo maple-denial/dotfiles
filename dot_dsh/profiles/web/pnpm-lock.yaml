@@ -18,8 +18,8 @@ importers:
         specifier: 5.9.1
         version: 5.9.1(@types/node@26.6.5)(debug@4.4.3)
       billion-context:
-        specifier: 0.1.211
-        version: 0.1.211(@types/node@26.6.5)
+        specifier: 0.1.212
+        version: 0.1.212(@types/node@26.6.5)
       deepseek-harness-zh-cn:
         specifier: ^0.1.5
         version: 0.1.5
@@ -504,8 +504,8 @@ packages:
   axios@1.20.0:
     resolution: {integrity: sha512-r8aOh8j9cGKpgQAqpzrUHnSIc6a59Y3Xf/cv8sy1DrHCkZHzQGEuoq1tARk6qSyDdtQGSDgpb9kFlruzPvrgwg==}
 
-  billion-context@0.1.211:
-    resolution: {integrity: sha512-Wup1pOPTCQm2t1RKJwGfL6neO83MU8jOEzEVkXXIS9Xf+xl8c09CyquzOL++TxY8UBGUJ/e1plIZpHr2CA50DA==}
+  billion-context@0.1.212:
+    resolution: {integrity: sha512-Bwjl4StlMNcE3JWe15iKLATwk5q8rgiNgR/isk5fCnOYfhtE8vsrtJPCqA5WGvsT2yJ9p/j3k4NUAkQER5qjjg==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -1718,7 +1718,7 @@ snapshots:
       - debug
       - supports-color
 
-  billion-context@0.1.211(@types/node@26.6.5):
+  billion-context@0.1.212(@types/node@26.6.5):
     dependencies:
       mysql2: 3.24.6(@types/node@26.6.5)
       zod: 4.6.7
