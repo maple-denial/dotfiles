@@ -58,3 +58,21 @@
 2026-11-01T12:28:33.625Z [boot] apply 完成 10ms
 2026-11-01T12:28:33.632Z [boot] initEnabled 2ms
 2026-11-01T12:28:34.044Z [boot] attachMappedSessions 412ms
+2026-11-02T00:48:21.123Z [interaction] 已接管 userQuestions service 的 IM 会话
+2026-11-02T00:48:21.126Z [boot] ChannelManager 构造 5ms
+2026-11-02T00:48:21.128Z [manager] API 已注册 /api/michengai/dsh-im-connect
+2026-11-02T00:48:21.128Z [boot] apply 完成 7ms
+2026-11-02T00:48:21.133Z [boot] initEnabled 2ms
+2026-11-02T00:48:21.469Z [boot] attachMappedSessions 336ms
+2026-11-02T04:41:43.724Z [interaction] 已接管 userQuestions service 的 IM 会话
+2026-11-02T04:41:43.727Z [boot] ChannelManager 构造 4ms
+2026-11-02T04:41:43.728Z [manager] API 已注册 /api/michengai/dsh-im-connect
+2026-11-02T04:41:43.728Z [boot] apply 完成 5ms
+2026-11-02T04:41:43.733Z [boot] initEnabled 2ms
+2026-11-02T04:41:44.065Z [boot] attachMappedSessions 332ms
+2026-11-05T02:40:43.025Z [interaction] 已接管 userQuestions service 的 IM 会话
+2026-11-05T02:40:43.028Z [boot] ChannelManager 构造 5ms
+2026-11-05T02:40:43.029Z [manager] API 已注册 /api/michengai/dsh-im-connect
+2026-11-05T02:40:43.029Z [boot] apply 完成 6ms
+2026-11-05T02:40:43.035Z [boot] initEnabled 2ms
+2026-11-05T02:40:43.399Z [boot] attachMappedSessions 363ms
