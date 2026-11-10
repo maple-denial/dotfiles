@@ -4,7 +4,7 @@
   "dependencies": {
     "@michengai/dsh-im-connect": "1.0.21",
     "@xmanrui/dsh-im": "5.9.1",
-    "billion-context": "0.1.211",
+    "billion-context": "0.1.212",
     "deepseek-harness-zh-cn": "^0.1.5",
     "dsh-cost-meter": "1.9.47",
     "dsh-whale-loli": "0.9.17",
