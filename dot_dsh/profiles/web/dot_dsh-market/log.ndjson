@@ -36,3 +36,21 @@
 {"at":"2026-11-01T12:35:27.751Z","level":"info","event":"install","detail":"billion-context: the host's own replay activated it; adopted instead of mounting a second copy (#814, #827)"}
 {"at":"2026-11-01T12:35:27.799Z","level":"info","event":"install","detail":"billion-context@0.1.211 exit=0 hot=true"}
 {"at":"2026-11-01T12:35:27.838Z","level":"info","event":"drain","detail":"install https://github.com/ranxianglei/billion-context: succeeded"}
+{"at":"2026-11-11T14:37:36.226Z","level":"info","event":"update-start","detail":"dshmarket -> dshmarket@1.73.17 (profile web)"}
+{"at":"2026-11-11T14:37:49.642Z","level":"info","event":"update","detail":"dshmarket -> dshmarket@1.73.17 exit=0"}
+{"at":"2026-11-11T14:38:01.986Z","level":"info","event":"restart","detail":"scheduled pid=6182 helper=9342 recovery=/tmp/dsh-market-restart-2026-11-11T14-38-01.recovery.json"}
+{"at":"2026-11-11T14:38:30.477Z","level":"info","event":"update-start","detail":"@michengai/dsh-im-connect -> @michengai/dsh-im-connect@1.0.35 (profile web)"}
+{"at":"2026-11-11T14:38:33.458Z","level":"info","event":"update","detail":"@michengai/dsh-im-connect -> @michengai/dsh-im-connect@1.0.35 exit=0"}
+{"at":"2026-11-11T14:38:33.518Z","level":"info","event":"drain","detail":"update @michengai/dsh-im-connect: succeeded"}
+{"at":"2026-11-11T14:38:34.092Z","level":"info","event":"update-start","detail":"@xmanrui/dsh-im -> @xmanrui/dsh-im@5.10.0 (profile web)"}
+{"at":"2026-11-11T14:38:38.468Z","level":"info","event":"update","detail":"@xmanrui/dsh-im -> @xmanrui/dsh-im@5.10.0 exit=0"}
+{"at":"2026-11-11T14:38:38.518Z","level":"info","event":"drain","detail":"update @xmanrui/dsh-im: succeeded"}
+{"at":"2026-11-11T14:38:39.576Z","level":"info","event":"update-start","detail":"billion-context -> billion-context@0.1.213 (profile web)"}
+{"at":"2026-11-11T14:38:45.508Z","level":"info","event":"update","detail":"billion-context -> billion-context@0.1.213 exit=0"}
+{"at":"2026-11-11T14:38:45.562Z","level":"info","event":"drain","detail":"update billion-context: succeeded"}
+{"at":"2026-11-11T14:38:46.321Z","level":"info","event":"update-start","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 (profile web)"}
+{"at":"2026-11-11T14:38:59.258Z","level":"info","event":"update-rollback","detail":"dsh-whale-loli: restored npm build v0.9.17"}
+{"at":"2026-11-11T14:38:59.259Z","level":"warn","event":"update","detail":"dsh-whale-loli: failed update command; previous build restored and verified"}
+{"at":"2026-11-11T14:38:59.260Z","level":"error","event":"update","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 exit=1 err=… The usual cause is the package moving the file the patch targets (for example a patch against client/client.js when the release now ships lib/client.js). Update or remove that patch file and its entry under pnpm.patchedDependencies in the profile's package.json"}
+{"at":"2026-11-11T14:38:59.335Z","level":"warn","event":"drain","detail":"update dsh-whale-loli: failed (MUTATION_FAILED)"}
+{"at":"2026-11-11T14:40:50.242Z","level":"info","event":"restart","detail":"scheduled pid=9357 helper=10331 recovery=/tmp/dsh-market-restart-2026-11-11T14-40-50.recovery.json"}
