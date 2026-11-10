@@ -9,4 +9,12 @@ index = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
 
 [target.'cfg(target_os = "linux")']
 #linker = "clang"
-rustflags = ["-C", "link-arg=-fuse-ld=mold"]
+rustflags = [
+    "-C", "link-arg=-fuse-ld=mold",
+    # dioxus desktop 等链接的动态库（libxdo.so.4 / libwebkit2gtk-4.1 / libssl.so.4）
+    # 来自 linuxbrew，ld.so 默认不搜索 brew 的 lib 目录，启动会报
+    # "cannot open shared object file"。编译期把 brew lib 目录写进二进制的
+    # RUNPATH，运行时自动搜索 —— 不依赖 LD_LIBRARY_PATH，任何启动方式均生效。
+    # （目录不存在时 ld.so 会静默跳过，跨机器拷贝二进制也无害）
+    "-C", "link-arg=-Wl,-rpath,/home/linuxbrew/.linuxbrew/lib",
+]
