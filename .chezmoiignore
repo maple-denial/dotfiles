@@ -3,3 +3,13 @@
 
 # pnpm 依赖目录：体积大、可由 package.json + lockfile 重建
 .dsh/profiles/*/node_modules/
+
+# nushell 历史文件：随使用增长，每次启动都变，不纳入 dotfiles
+.config/nushell/history.txt
+
+# bluefin-cli 相关：生成物与运行时状态，由 bluefin-cli 自身维护
+.config/nushell/bluefin-cli.nu
+.config/nushell/vendor/
+
+# bluefin-cli 遥测计数（运行时数据，不同步）
+.config/bluefin-cli/countme.json

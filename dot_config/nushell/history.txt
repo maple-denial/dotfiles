@@ -1,2 +1,0 @@
-carapace --list
-exit

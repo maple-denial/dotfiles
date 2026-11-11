@@ -1,0 +1,11 @@
+bundles:
+    base_url: https://raw.githubusercontent.com/projectbluefin/common/main/system_files
+    default_path: shared/usr/share/ublue-os/homebrew
+game:
+    high_score: 64
+theme: catppuccin
+ui:
+    dark_mode: true
+    flavor: auto
+update:
+    last_check: 1794485261
