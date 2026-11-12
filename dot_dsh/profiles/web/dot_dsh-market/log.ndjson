@@ -54,3 +54,39 @@
 {"at":"2026-11-11T14:38:59.260Z","level":"error","event":"update","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 exit=1 err=… The usual cause is the package moving the file the patch targets (for example a patch against client/client.js when the release now ships lib/client.js). Update or remove that patch file and its entry under pnpm.patchedDependencies in the profile's package.json"}
 {"at":"2026-11-11T14:38:59.335Z","level":"warn","event":"drain","detail":"update dsh-whale-loli: failed (MUTATION_FAILED)"}
 {"at":"2026-11-11T14:40:50.242Z","level":"info","event":"restart","detail":"scheduled pid=9357 helper=10331 recovery=/tmp/dsh-market-restart-2026-11-11T14-40-50.recovery.json"}
+{"at":"2026-11-12T12:53:33.139Z","level":"info","event":"update-start","detail":"dshmarket -> dshmarket@1.73.19 (profile web)"}
+{"at":"2026-11-12T12:53:35.817Z","level":"info","event":"update","detail":"dshmarket -> dshmarket@1.73.19 exit=0"}
+{"at":"2026-11-12T12:53:35.856Z","level":"info","event":"drain","detail":"update dshmarket: succeeded"}
+{"at":"2026-11-12T12:53:42.873Z","level":"info","event":"update-start","detail":"@michengai/dsh-im-connect -> @michengai/dsh-im-connect@1.0.37 (profile web)"}
+{"at":"2026-11-12T12:53:46.029Z","level":"info","event":"update","detail":"@michengai/dsh-im-connect -> @michengai/dsh-im-connect@1.0.37 exit=0"}
+{"at":"2026-11-12T12:53:46.062Z","level":"info","event":"drain","detail":"update @michengai/dsh-im-connect: succeeded"}
+{"at":"2026-11-12T12:53:46.494Z","level":"info","event":"update-start","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 (profile web)"}
+{"at":"2026-11-12T12:53:53.031Z","level":"info","event":"update-rollback","detail":"dsh-whale-loli: restored npm build v0.9.17"}
+{"at":"2026-11-12T12:53:53.031Z","level":"warn","event":"update","detail":"dsh-whale-loli: failed update command; previous build restored and verified"}
+{"at":"2026-11-12T12:53:53.032Z","level":"error","event":"update","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 exit=1 err=… The usual cause is the package moving the file the patch targets (for example a patch against client/client.js when the release now ships lib/client.js). Update or remove that patch file and its entry under pnpm.patchedDependencies in the profile's package.json"}
+{"at":"2026-11-12T12:53:53.075Z","level":"warn","event":"drain","detail":"update dsh-whale-loli: failed (MUTATION_FAILED)"}
+{"at":"2026-11-12T12:55:17.203Z","level":"info","event":"install","detail":"dsh-music-panel: pinned to the registry's latest, 0.28.2, so pnpm's fresh-release hold cannot substitute an older version silently"}
+{"at":"2026-11-12T12:55:22.881Z","level":"error","event":"install","detail":"route error: cannot get required service \"loader\" in inactive context"}
+{"at":"2026-11-12T12:55:22.881Z","level":"info","event":"drain","detail":"install https://github.com/Aliboder/dsh-music-panel: cancelled (MARKET_UNLOADED)"}
+{"at":"2026-11-12T12:55:36.810Z","level":"info","event":"restart","detail":"scheduled pid=2071 helper=25444 recovery=/tmp/dsh-market-restart-2026-11-12T12-55-36.recovery.json"}
+{"at":"2026-11-12T12:55:57.628Z","level":"info","event":"update-start","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 (profile web)"}
+{"at":"2026-11-12T12:56:01.500Z","level":"info","event":"update-rollback","detail":"dsh-whale-loli: restored npm build v0.9.17"}
+{"at":"2026-11-12T12:56:01.500Z","level":"warn","event":"update","detail":"dsh-whale-loli: failed update command; previous build restored and verified"}
+{"at":"2026-11-12T12:56:01.501Z","level":"error","event":"update","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 exit=1 err=… The usual cause is the package moving the file the patch targets (for example a patch against client/client.js when the release now ships lib/client.js). Update or remove that patch file and its entry under pnpm.patchedDependencies in the profile's package.json"}
+{"at":"2026-11-12T12:56:01.554Z","level":"warn","event":"drain","detail":"update dsh-whale-loli: failed (MUTATION_FAILED)"}
+{"at":"2026-11-12T12:56:16.847Z","level":"info","event":"uninstall-start","detail":"dsh-cost-meter (profile web)"}
+{"at":"2026-11-12T12:56:18.973Z","level":"info","event":"toggle","detail":"dsh-cost-meter: no loader entry matched"}
+{"at":"2026-11-12T12:56:18.976Z","level":"info","event":"uninstall","detail":"dsh-cost-meter: dropped 1 minimumReleaseAgeExclude row(s) its install had added"}
+{"at":"2026-11-12T12:56:18.976Z","level":"info","event":"uninstall","detail":"dsh-cost-meter exit=0 live-removed=false"}
+{"at":"2026-11-12T12:56:18.977Z","level":"info","event":"drain","detail":"uninstall dsh-cost-meter: succeeded"}
+{"at":"2026-11-12T12:56:30.065Z","level":"info","event":"update-start","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 (profile web)"}
+{"at":"2026-11-12T12:56:33.380Z","level":"info","event":"update-rollback","detail":"dsh-whale-loli: restored npm build v0.9.17"}
+{"at":"2026-11-12T12:56:33.380Z","level":"warn","event":"update","detail":"dsh-whale-loli: failed update command; previous build restored and verified"}
+{"at":"2026-11-12T12:56:33.381Z","level":"error","event":"update","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 exit=1 err=… The usual cause is the package moving the file the patch targets (for example a patch against client/client.js when the release now ships lib/client.js). Update or remove that patch file and its entry under pnpm.patchedDependencies in the profile's package.json"}
+{"at":"2026-11-12T12:56:33.434Z","level":"warn","event":"drain","detail":"update dsh-whale-loli: failed (MUTATION_FAILED)"}
+{"at":"2026-11-12T12:56:42.892Z","level":"info","event":"restart","detail":"scheduled pid=25456 helper=27803 recovery=/tmp/dsh-market-restart-2026-11-12T12-56-42.recovery.json"}
+{"at":"2026-11-12T12:56:59.672Z","level":"info","event":"update-start","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 (profile web)"}
+{"at":"2026-11-12T12:57:02.094Z","level":"info","event":"update-rollback","detail":"dsh-whale-loli: restored npm build v0.9.17"}
+{"at":"2026-11-12T12:57:02.095Z","level":"warn","event":"update","detail":"dsh-whale-loli: failed update command; previous build restored and verified"}
+{"at":"2026-11-12T12:57:02.096Z","level":"error","event":"update","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 exit=1 err=… The usual cause is the package moving the file the patch targets (for example a patch against client/client.js when the release now ships lib/client.js). Update or remove that patch file and its entry under pnpm.patchedDependencies in the profile's package.json"}
+{"at":"2026-11-12T12:57:02.138Z","level":"warn","event":"drain","detail":"update dsh-whale-loli: failed (MUTATION_FAILED)"}

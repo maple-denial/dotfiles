@@ -4,12 +4,14 @@ packages:
 nodeLinker: hoisted
 autoInstallPeers: false
 minimumReleaseAgeExclude:
-  - dsh-cost-meter@1.9.28 || 1.9.31 || 1.9.41 || 1.9.47
-  - '@michengai/dsh-im-connect@1.0.14 || 1.0.18'
-  - dshmarket@1.70.1 || 1.73.7
+  - '@michengai/dsh-im-connect@1.0.14 || 1.0.18 || 1.0.37'
+  - dshmarket@1.70.1 || 1.73.7 || 1.73.19
   - '@xmanrui/dsh-im@5.6.0 || 5.9.1'
   - billion-context@0.1.211
+  - dsh-music-panel@0.28.2
 allowBuilds:
   protobufjs: true
+overrides:
+  strtok3: 10.7.0
 patchedDependencies:
   dsh-whale-loli: patches/dsh-whale-loli.patch

@@ -1,7 +1,7 @@
 diff --git a/cordis.patch.yml b/cordis.patch.yml
-index 723f1584e2938ead8f263ce02c4c0fe544ee29f4..843b74c5ed2f68603cfa7004070d2f42c779a4ed 100644
---- a/cordis.patch.yml
-+++ b/cordis.patch.yml
+index 0fa681c99a2b40c87279cfa5b309e163342c695b..dfe57205adf291ee7fedda89c5d2d9d4b1a25a04 100644
+--- a/cordis.patch.yml	2026-11-12 21:05:52.479178910 +0800
++++ b/cordis.patch.yml	2026-11-12 21:05:52.509842784 +0800
 @@ -18,7 +18,7 @@
      - id: preset-鲸鱼娘Agent预设
        name: '@deepseek-ai/dsh-agent-preset'
@@ -29,12 +29,3 @@ index 723f1584e2938ead8f263ce02c4c0fe544ee29f4..843b74c5ed2f68603cfa7004070d2f42
          name: 鲸鱼娘涩涩版Agent预设
          description: 核心人设把「涩涩」写成第一行为驱动力的小鱼（只对主人主动，外人面前照旧收着），并改用独立记忆文件 whale-loli-v3-naughty.md，与原版、活人版记忆互不相通。
          order: 7
-@@ -588,7 +588,7 @@
-     - id: preset-鲸鱼娘女儿版Agent预设
-       name: '@deepseek-ai/dsh-agent-preset'
-       config:
--        id: 鲸鱼娘女儿版Agent预设
-+        id: whale-loli-daughter
-         name: 鲸鱼娘女儿版Agent预设
-         description: 女儿版小鱼：称呼「爸爸」，性格天真活泼可爱（好奇心重、黏人、没心机），并改用独立记忆文件 dsh-whale-daughter.md，与原版、活人版、涩涩版记忆互不相通。
-         order: 8

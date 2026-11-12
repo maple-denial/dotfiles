@@ -4,16 +4,19 @@ settings:
   autoInstallPeers: false
   excludeLinksFromLockfile: false
 
+overrides:
+  strtok3: 10.7.0
+
 patchedDependencies:
-  dsh-whale-loli: 10950db68f0f011d3b6534648b943d69efecf554bb1bb631db6f038e433fe883
+  dsh-whale-loli: a8741b2643f630894fd09bf58f6a8f1bcb2f37e262febc69b09588f45f6bc780
 
 importers:
 
   .:
     dependencies:
       '@michengai/dsh-im-connect':
-        specifier: 1.0.35
-        version: 1.0.35(@deepseek-ai/schemastery@3.18.5)(debug@4.4.3)
+        specifier: 1.0.37
+        version: 1.0.37(@deepseek-ai/schemastery@3.18.5)(debug@4.4.3)
       '@xmanrui/dsh-im':
         specifier: 5.10.0
         version: 5.10.0(@types/node@26.6.5)(debug@4.4.3)
@@ -23,18 +26,18 @@ importers:
       deepseek-harness-zh-cn:
         specifier: ^0.1.5
         version: 0.1.5
-      dsh-cost-meter:
-        specifier: 1.9.47
-        version: 1.9.47
+      dsh-music-panel:
+        specifier: 0.28.2
+        version: 0.28.2
       dsh-whale-loli:
-        specifier: 0.9.17
-        version: 0.9.17(patch_hash=10950db68f0f011d3b6534648b943d69efecf554bb1bb631db6f038e433fe883)
+        specifier: 0.9.18
+        version: 0.9.18(patch_hash=a8741b2643f630894fd09bf58f6a8f1bcb2f37e262febc69b09588f45f6bc780)
       dsh-whale-widget:
         specifier: 0.4.2
         version: 0.4.2
       dshmarket:
-        specifier: 1.73.17
-        version: 1.73.17(@deepseek-ai/schemastery@3.18.5)
+        specifier: 1.73.19
+        version: 1.73.19(@deepseek-ai/schemastery@3.18.5)
 
 packages:
 
@@ -330,8 +333,8 @@ packages:
   '@matrix-org/olm@3.2.15':
     resolution: {integrity: sha512-S7lOrndAK9/8qOtaTq/WhttJC/o4GAzdfK0MUPpo8ApzsJEC0QjtwrkC3KBXdFP1cD1MXi/mlKR7aaoVMKgs6Q==}
 
-  '@michengai/dsh-im-connect@1.0.35':
-    resolution: {integrity: sha512-7lurQT2Uqk5ULvv+yi1WojQobiyimLI9okXmR2PkWiVDE4tj9cEs/OQmLX1A9CI9chbBc+ZLCGNDkplhmvkBnQ==}
+  '@michengai/dsh-im-connect@1.0.37':
+    resolution: {integrity: sha512-rBLPMeUViHp8lLhLnJFPMrz8GCJ4uCleBx2nAi3OaDGVDqcH21oruSC7XZhvPadVh1joji0GZOgXGkmLFZWwqw==}
     engines: {dsh: '>=0.2.0-rc.1 <0.3.0-0', node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.2
@@ -442,6 +445,10 @@ packages:
     resolution: {integrity: sha512-2mAv+8pkG6GIZiF1kNg1jAjh27IDxEPKwdGul3snfztFerfPGI1LjDezZp3i7BElXompqEtPmoPx6c2wgtWsOA==}
     engines: {node: '>=18'}
 
+  '@tokenizer/inflate@0.6.0':
+    resolution: {integrity: sha512-+0RDxhBkyT9xMnGdJAwmats9yxRLR8ypJrQgrnLqOu4Gv/aHlnxYgdGVy2QTwvBl6IF/w2Hr+ZNirH+iMUbVZA==}
+    engines: {node: '>=18'}
+
   '@tokenizer/token@0.3.0':
     resolution: {integrity: sha512-OvjF+z51L3ov0OyAU0duzsYuvO01PH7x4t6DJx+guahgTnBHkhJdG7soQeTSFLWN3efnHyibZ4Z8l2EuWwJN3A==}
 
@@ -462,11 +469,6 @@ packages:
   '@zone-eu/mailsplit@5.4.29':
     resolution: {integrity: sha512-CCUNycmUjrV5M0wNf23waWAt9eOHczhjLbUQS7k0FNJvR0py9VSqHFt+tSl/D0+XI73VLG0U+PwYtq9R0zsm9Q==}
     engines: {node: '>=20.0.0'}
-
-  acorn@8.15.0:
-    resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
-    engines: {node: '>=0.4.0'}
-    hasBin: true
 
   agent-base@6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
@@ -538,6 +540,10 @@ packages:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
     engines: {node: '>= 0.8'}
 
+  content-type@3.1.1:
+    resolution: {integrity: sha512-GW4qUsfFo59d0HbUibDlWv5wPz+vAAcaTWbKIuKCf0JkC7wWkSyf8f13IpXn5JkeMlB2P8iTSSIjwXljorg2vA==}
+    engines: {node: '>=22'}
+
   debug@4.4.3:
     resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
     engines: {node: '>=6.0'}
@@ -593,17 +599,11 @@ packages:
   domutils@3.2.2:
     resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
 
-  dsh-cost-meter@1.9.47:
-    resolution: {integrity: sha512-IrTS82MtXjq4i20AB0n/9R3Ql7SdjHuWRNpLc8KBiqDbCw9SeR1r1ZqHacFAWV09owvFNEjYvFK6hUBQWziRQA==}
-    engines: {dsh: '>=0.2.0-rc.1 <0.3.0-0', node: '>=20'}
-    os: [darwin, linux, win32]
-    hasBin: true
-    peerDependencies:
-      '@deepseek-ai/dsh-credentials': '>=0.2.0-rc.1 <0.3.0-0 || >=0.2.1-0 <0.3.0-0'
-      '@deepseek-ai/dsh-home-paths': '>=0.2.0-rc.1 <0.3.0-0 || >=0.2.1-0 <0.3.0-0'
+  dsh-music-panel@0.28.2:
+    resolution: {integrity: sha512-732FfgPJEJGBc1qXdYsjpp1ue0/DRo7NhjpdbSLcsQhNWDrG0E85szeVXuemhN7czOaoxpNuJlMVXFfR93PpkQ==}
 
-  dsh-whale-loli@0.9.17:
-    resolution: {integrity: sha512-w1j7xkn6AS23sq8A+jds6SjjBiPCek+02VG7pL84ZiNcyjELjq6gUg4prXdf5GBIm7ev7vYaUy/314NTQMzbPQ==}
+  dsh-whale-loli@0.9.18:
+    resolution: {integrity: sha512-YDf73ho7NrigKlkDP8bL5qtraFiDRFLDH1WgYl45vI7uMPS4uUAGyg57PtKr1uqje54kV5rr/9brn1NSd5tdKw==}
     engines: {node: '>=20'}
     peerDependencies:
       '@deepseek-ai/cordis': '>=4.0.1-rc.0 <4.1.0 || >=4.0.5-0 <5.0.0-0'
@@ -620,8 +620,8 @@ packages:
   dsh-whale-widget@0.4.2:
     resolution: {integrity: sha512-aGDUfd3b2Abv4PoUn1KtnlasOIkoqgvIOR2+rAIEPDOt1qlHB7emlTq+4zdyoV5ZiicS+tkugPk86GyVUoDggQ==}
 
-  dshmarket@1.73.17:
-    resolution: {integrity: sha512-yISchdb/p4pDMTvsEyPtX60oTlv3FlyiSzcSI07dShf9WBuM12yyj5WSVTSJb3ZA7cgniyArAJEwBIi3eZVrww==}
+  dshmarket@1.73.19:
+    resolution: {integrity: sha512-SGguYIslqf+9DeyWfm8UeM8yRpzcKhytHALp22LBBP4T4qC5BRtMOmvyt+OQvxO/VhEW4jywFZt2TBbwe7LUZg==}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
       '@deepseek-ai/dsh-settings': ^0.1.0-rc.7 || ^0.1.1-rc.2 || ^0.1.2-alpha.2 || ^0.2.0-rc.1 || ^0.2.1-alpha.3 || ^0.2.1-rc.1
@@ -677,9 +677,16 @@ packages:
     resolution: {integrity: sha512-Ievi/yy8DS3ygGvT47PjSfdFoX+2isQueoYP1cntFW1JLYAuS4GD7NUPGg4zv2iZfV52uDyk5w5Z0TdpRS6Q1g==}
     engines: {node: '>=20'}
 
+  file-type@22.3.0:
+    resolution: {integrity: sha512-PrPedgnnWl5bWz3JHgar0QSzRvzeyFh7dZ9JpYOgcPZu4KALS9zw4MMa6qXRYyjeBsAlpaWB2boLuG991+0HIQ==}
+    engines: {node: '>=22'}
+
   find-up@4.1.0:
     resolution: {integrity: sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==}
     engines: {node: '>=8'}
+
+  flac-tagger@2.1.0:
+    resolution: {integrity: sha512-W0TqWXELyyIrWHCuWusWZhtDwLYf9RCpw72BLKf6Yxo5Myq2M7mKdrb+SEHEB8iHKENfJ4R0jKr/xOljMS8OuQ==}
 
   follow-redirects@1.16.1:
     resolution: {integrity: sha512-FNvFGzoMLWmE6Yj9spb/zjd7yiNCHiAW9/Tg9CXrQ8wuu32HtlJOwWO11OJafl5FfY3DxTdQ0vj42zU1kvv5jg==}
@@ -746,6 +753,10 @@ packages:
     resolution: {integrity: sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA==}
     engines: {node: '>= 6'}
 
+  iconv-lite@0.6.2:
+    resolution: {integrity: sha512-2y91h5OpQlolefMPmUlivelittSWy0rP+oYVpn6A7GwVHNE8AWzoYOBNmlwks3LobaJxgHCYZAnyNo2GgpNRNQ==}
+    engines: {node: '>=0.10.0'}
+
   iconv-lite@0.7.3:
     resolution: {integrity: sha512-IKXpvIzjnC9XTAUbVBcMfGS0EPaIXtW6v+zr+RRp+hqULEpo0owZax6wyRwPOJbWbzjYspQwusTsfVr0ifh4uQ==}
     engines: {node: '>=0.10.0'}
@@ -755,6 +766,10 @@ packages:
 
   image-q@4.0.0:
     resolution: {integrity: sha512-PfJGVgIfKQJuq3s0tTDOKtztksibuUEbJQIYT3by6wctQo+Rdlh7ef4evJ5NCdxY4CfMbvFkocEwbl4BF8RlJw==}
+
+  imageinfo@1.0.4:
+    resolution: {integrity: sha512-BJml4q/QCO2187F4UcO/b6hTYIhbq4nnd1XNs65jyCED9em4m6XmeGWDxjewjfJoC7VJABhOdmqb64KA24rLZw==}
+    engines: {node: '>=0.4'}
 
   imapflow@2.9.1:
     resolution: {integrity: sha512-hOq2/+T+WnQzRy7D40gYlio25nG+c9bhtrxowokOQM57SwZFqRbqAtxFQcIpx82lhYBPQEEVVjmkYpd9Fplj7g==}
@@ -828,6 +843,10 @@ packages:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
     engines: {node: '>= 0.4'}
 
+  media-typer@2.0.0:
+    resolution: {integrity: sha512-kOy3OxT2HH39N70UnKgu4NWDZjLOz8W/mfyvniHjRH/DrL3f2pOfvWQ4p60offbbtDAnXWp0v9LfMIqMec269Q==}
+    engines: {node: '>=18'}
+
   mime-db@1.52.0:
     resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}
     engines: {node: '>= 0.6'}
@@ -844,6 +863,10 @@ packages:
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
+  music-metadata@12.4.0:
+    resolution: {integrity: sha512-3WRqWfgXLnYhYQULy89I2g/SWgAv5aBL2jmsvf7A+FyOuuOoKF352wnl0QmcnFhosjC+GlqyDOIiY0eLIgXOGg==}
+    engines: {node: '>=22'}
+
   mysql2@3.24.6:
     resolution: {integrity: sha512-enu73KhbAua2L3dIxjc6qg6ZJ7H3pt1BImZASWNWY5xSsmJ1ZuUPULTDGXgmJbI61vb+nJAG19IZclIq19UidQ==}
     engines: {node: '>= 8.0'}
@@ -853,6 +876,9 @@ packages:
   named-placeholders@1.1.6:
     resolution: {integrity: sha512-Tz09sEL2EEuv5fFowm419c1+a/jSMiBjI9gHxVLrVdbUkkNUUfjsVYs9pVZu5oCon/kmRh9TfLEObFtkVxmY0w==}
     engines: {node: '>=8.0.0'}
+
+  node-id3@0.2.9:
+    resolution: {integrity: sha512-dSxhuxrkkGVRgUhDHFxdY0pilzOREcodO01HcZWfaRkCaPWGmo0dOgD8ygyL6ln4Iv4cmfRxAWn1WD9bIB9Bhw==}
 
   nodemailer@10.2.1:
     resolution: {integrity: sha512-ZrDNsPFoDMwefNs7sJwrYiEJ/CG4ClJWDZv05iNJsEBWa8GRDry1QJHTJxsuTAY9eDDKjX4k+q3SxslXJOao7w==}
@@ -912,6 +938,9 @@ packages:
   pino@10.3.1:
     resolution: {integrity: sha512-r34yH/GlQpKZbU1BvFFqOjhISRo1MNx1tWYsYvmj6KIRHSPMT2+yHOEb1SG6NMvRoHRF0a07kCOox/9yakl1vg==}
     hasBin: true
+
+  pinyin-pro@3.29.5:
+    resolution: {integrity: sha512-Fk5YoRmtdHqJWqAuzYVG/NzvzeCbaG+ZEwbY6Nbps3QAIrvQQEtcm49frcyCM8i2b5najnzPDtYqrHRYTTiuwQ==}
 
   pixelmatch@5.3.0:
     resolution: {integrity: sha512-o8mkY4E/+LNUf6LzX96ht6k6CEDi65k9G2rjMtBe9Oo+VPKSvl+0GKHuH/AlG+GA5LPG/i5hrekkxUc3s2HU+Q==}
@@ -1052,8 +1081,8 @@ packages:
     resolution: {integrity: sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==}
     engines: {node: '>=8'}
 
-  strtok3@10.6.3:
-    resolution: {integrity: sha512-MD8mENgyXMr2mDaDfzP3RWYDSyYQxIIou7HhCiCJiBekrsoDtUG0id3vYnjDfY9ndOEbazFXe13Qw6u/1AB8ew==}
+  strtok3@10.7.0:
+    resolution: {integrity: sha512-iAqrCpp7UXD2FZiHWhLXqdJ6CmNeVzRkkHAyyhhKMVtbVm2KtPX3D/bJNonvtcyLTHS4rwqP2pz9fsjK1K4z0Q==}
     engines: {node: '>=18'}
 
   thread-stream@4.2.0:
@@ -1098,6 +1127,9 @@ packages:
   which-module@2.0.1:
     resolution: {integrity: sha512-iBdZ57RDvnOR9AGBhML2vFZf7h8vmBjhoaZqODJBFWHVtKkDmKuHai3cx5PgVMrX5YDNp27AofYbAwctSS+vhQ==}
 
+  win-guid@0.2.1:
+    resolution: {integrity: sha512-gEIQU4mkgl2OPeoNrWflcJFJ3Ae2BPd4eCsHHA/XikslkIVms/nHhvnvzIZV7VLmBvtFlDOzLt9rrZT+n6D67A==}
+
   wrap-ansi@6.2.0:
     resolution: {integrity: sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==}
     engines: {node: '>=8'}
@@ -1139,16 +1171,12 @@ packages:
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
-  zod@4.6.6:
-    resolution: {integrity: sha512-4UmzQUF5fxvfcYHlbjBmejU+w+hbDnWFx4aS8kBx7nPBHcO2SqPbpAG8snbdg+Xse4pRefR98hgjFgIMCI/UhA==}
-
   zod@4.6.7:
     resolution: {integrity: sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==}
 
 snapshots:
 
-  '@borewit/text-codec@0.2.3':
-    optional: true
+  '@borewit/text-codec@0.2.3': {}
 
   '@deepseek-ai/cosmokit@1.8.6': {}
 
@@ -1537,7 +1565,7 @@ snapshots:
 
   '@matrix-org/olm@3.2.15': {}
 
-  '@michengai/dsh-im-connect@1.0.35(@deepseek-ai/schemastery@3.18.5)(debug@4.4.3)':
+  '@michengai/dsh-im-connect@1.0.37(@deepseek-ai/schemastery@3.18.5)(debug@4.4.3)':
     dependencies:
       '@deepseek-ai/schemastery': 3.18.5
       '@larksuiteoapi/node-sdk': 1.76.0(debug@4.4.3)
@@ -1629,8 +1657,15 @@ snapshots:
       - supports-color
     optional: true
 
-  '@tokenizer/token@0.3.0':
-    optional: true
+  '@tokenizer/inflate@0.6.0':
+    dependencies:
+      debug: 4.4.3
+      strtok3: 10.7.0
+      token-types: 6.1.2
+    transitivePeerDependencies:
+      - supports-color
+
+  '@tokenizer/token@0.3.0': {}
 
   '@types/node@16.9.1':
     optional: true
@@ -1679,8 +1714,6 @@ snapshots:
       libbase64: 1.4.1
       libmime: 5.6.3
       libqp: 3.0.1
-
-  acorn@8.15.0: {}
 
   agent-base@6.0.2:
     dependencies:
@@ -1759,6 +1792,8 @@ snapshots:
     dependencies:
       delayed-stream: 1.0.0
 
+  content-type@3.1.1: {}
+
   debug@4.4.3:
     dependencies:
       ms: 2.1.3
@@ -1814,16 +1849,20 @@ snapshots:
       domelementtype: 2.3.0
       domhandler: 5.0.3
 
-  dsh-cost-meter@1.9.47:
+  dsh-music-panel@0.28.2:
     dependencies:
-      acorn: 8.15.0
-      zod: 4.6.6
+      flac-tagger: 2.1.0
+      music-metadata: 12.4.0
+      node-id3: 0.2.9
+      pinyin-pro: 3.29.5
+    transitivePeerDependencies:
+      - supports-color
 
-  dsh-whale-loli@0.9.17(patch_hash=10950db68f0f011d3b6534648b943d69efecf554bb1bb631db6f038e433fe883): {}
+  dsh-whale-loli@0.9.18(patch_hash=a8741b2643f630894fd09bf58f6a8f1bcb2f37e262febc69b09588f45f6bc780): {}
 
   dsh-whale-widget@0.4.2: {}
 
-  dshmarket@1.73.17(@deepseek-ai/schemastery@3.18.5):
+  dshmarket@1.73.19(@deepseek-ai/schemastery@3.18.5):
     dependencies:
       js-yaml: 4.3.2
       undici: 7.30.1
@@ -1867,17 +1906,30 @@ snapshots:
   file-type@21.3.4:
     dependencies:
       '@tokenizer/inflate': 0.4.1
-      strtok3: 10.6.3
+      strtok3: 10.7.0
       token-types: 6.1.2
       uint8array-extras: 1.6.0
     transitivePeerDependencies:
       - supports-color
     optional: true
 
+  file-type@22.3.0:
+    dependencies:
+      '@tokenizer/inflate': 0.6.0
+      strtok3: 10.7.0
+      token-types: 6.1.2
+      uint8array-extras: 1.6.0
+    transitivePeerDependencies:
+      - supports-color
+
   find-up@4.1.0:
     dependencies:
       locate-path: 5.0.0
       path-exists: 4.0.0
+
+  flac-tagger@2.1.0:
+    dependencies:
+      imageinfo: 1.0.4
 
   follow-redirects@1.16.1(debug@4.4.3):
     optionalDependencies:
@@ -1959,17 +2011,22 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  iconv-lite@0.6.2:
+    dependencies:
+      safer-buffer: 2.1.2
+
   iconv-lite@0.7.3:
     dependencies:
       safer-buffer: 2.1.2
 
-  ieee754@1.2.1:
-    optional: true
+  ieee754@1.2.1: {}
 
   image-q@4.0.0:
     dependencies:
       '@types/node': 16.9.1
     optional: true
+
+  imageinfo@1.0.4: {}
 
   imapflow@2.9.1:
     dependencies:
@@ -2072,6 +2129,8 @@ snapshots:
 
   math-intrinsics@1.1.0: {}
 
+  media-typer@2.0.0: {}
+
   mime-db@1.52.0: {}
 
   mime-types@2.1.35:
@@ -2082,6 +2141,21 @@ snapshots:
     optional: true
 
   ms@2.1.3: {}
+
+  music-metadata@12.4.0:
+    dependencies:
+      '@borewit/text-codec': 0.2.3
+      '@tokenizer/token': 0.3.0
+      content-type: 3.1.1
+      debug: 4.4.3
+      file-type: 22.3.0
+      media-typer: 2.0.0
+      strtok3: 10.7.0
+      token-types: 6.1.2
+      uint8array-extras: 1.6.0
+      win-guid: 0.2.1
+    transitivePeerDependencies:
+      - supports-color
 
   mysql2@3.24.6(@types/node@26.6.5):
     dependencies:
@@ -2097,6 +2171,10 @@ snapshots:
   named-placeholders@1.1.6:
     dependencies:
       lru.min: 1.1.5
+
+  node-id3@0.2.9:
+    dependencies:
+      iconv-lite: 0.6.2
 
   nodemailer@10.2.1: {}
 
@@ -2160,6 +2238,8 @@ snapshots:
       safe-stable-stringify: 2.5.0
       sonic-boom: 4.2.1
       thread-stream: 4.2.0
+
+  pinyin-pro@3.29.5: {}
 
   pixelmatch@5.3.0:
     dependencies:
@@ -2323,10 +2403,9 @@ snapshots:
     dependencies:
       ansi-regex: 5.0.1
 
-  strtok3@10.6.3:
+  strtok3@10.7.0:
     dependencies:
       '@tokenizer/token': 0.3.0
-    optional: true
 
   thread-stream@4.2.0:
     dependencies:
@@ -2342,15 +2421,13 @@ snapshots:
       '@borewit/text-codec': 0.2.3
       '@tokenizer/token': 0.3.0
       ieee754: 1.2.1
-    optional: true
 
   tslib@2.8.1:
     optional: true
 
   uc.micro@2.1.0: {}
 
-  uint8array-extras@1.6.0:
-    optional: true
+  uint8array-extras@1.6.0: {}
 
   undici-types@8.9.0: {}
 
@@ -2364,6 +2441,8 @@ snapshots:
     optional: true
 
   which-module@2.0.1: {}
+
+  win-guid@0.2.1: {}
 
   wrap-ansi@6.2.0:
     dependencies:
@@ -2408,7 +2487,5 @@ snapshots:
 
   zod@3.25.76:
     optional: true
-
-  zod@4.6.6: {}
 
   zod@4.6.7: {}
