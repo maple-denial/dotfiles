@@ -19,3 +19,6 @@
 $env.config.show_banner = false
 source $"($nu.cache-dir)/carapace.nu"
 source /home/maple/.config/nushell/bluefin-cli.nu # bluefin-cli shell-config
+
+# go install 安装的二进制目录（GOBIN 默认 $HOME/go/bin）
+$env.PATH = ($env.PATH | prepend ($env.HOME | path join "go" "bin"))
