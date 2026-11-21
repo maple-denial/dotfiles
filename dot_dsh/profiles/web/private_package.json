@@ -2,11 +2,14 @@
   "name": "dsh-profile-web",
   "private": true,
   "dependencies": {
-    "@michengai/dsh-im-connect": "1.0.37",
+    "@michengai/dsh-im-connect": "1.0.46",
+    "@michengai/dsh-skills-manager": "1.5.0",
     "@xmanrui/dsh-im": "5.10.0",
-    "billion-context": "0.1.213",
+    "billion-context": "0.1.216",
     "deepseek-harness-zh-cn": "^0.1.5",
-    "dsh-music-panel": "0.28.2",
+    "dsh-cost-meter": "1.9.81",
+    "dsh-music-panel": "0.39.2",
+    "dsh-pet": "0.4.9",
     "dsh-whale-loli": "0.9.18",
     "dsh-whale-widget": "0.4.2",
     "dshmarket": "1.73.19"
@@ -17,13 +20,14 @@
         "@deepseek-ai/dsh-base",
         "@deepseek-ai/dsh-web-app",
         "dshmarket",
-        "dsh-whale-widget",
         "@michengai/dsh-im-connect",
         "deepseek-harness-zh-cn",
         "@xmanrui/dsh-im",
         "dsh-whale-loli",
         "billion-context",
-        "dsh-music-panel"
+        "@michengai/dsh-skills-manager",
+        "dsh-pet",
+        "dsh-cost-meter"
       ]
     }
   }

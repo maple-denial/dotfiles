@@ -9,7 +9,8 @@
   name: "@deepseek-ai/dsh-agent-default-model"
   config:
     provider: xiaomi-token-plan-cn
-    model: mimo-v2.6-flash
+    model: mimo-v2.6-pro
+    reasoningEffort: high
 - id: agent-preset-registry
   name: "@deepseek-ai/dsh-agent-preset-registry"
   config:
@@ -21,3 +22,5 @@
     providers:
       xiaomi-token-plan-cn:
         apiKeyEnv: XIAOMI_TOKEN_PLAN_CN_API_KEY
+- id: dsh-whale-widget
+  disabled: true

@@ -90,3 +90,36 @@
 {"at":"2026-11-12T12:57:02.095Z","level":"warn","event":"update","detail":"dsh-whale-loli: failed update command; previous build restored and verified"}
 {"at":"2026-11-12T12:57:02.096Z","level":"error","event":"update","detail":"dsh-whale-loli -> dsh-whale-loli@0.9.18 exit=1 err=… The usual cause is the package moving the file the patch targets (for example a patch against client/client.js when the release now ships lib/client.js). Update or remove that patch file and its entry under pnpm.patchedDependencies in the profile's package.json"}
 {"at":"2026-11-12T12:57:02.138Z","level":"warn","event":"drain","detail":"update dsh-whale-loli: failed (MUTATION_FAILED)"}
+{"at":"2026-11-14T12:43:58.154Z","level":"info","event":"install","detail":"dsh-skills-manager: pinned to the registry's latest, 1.4.7, so pnpm's fresh-release hold cannot substitute an older version silently"}
+{"at":"2026-11-14T12:44:03.779Z","level":"info","event":"install","detail":"@michengai/dsh-skills-manager: the host's own replay activated it; adopted instead of mounting a second copy (#814, #827)"}
+{"at":"2026-11-14T12:44:03.851Z","level":"info","event":"install","detail":"@michengai/dsh-skills-manager@1.4.7 exit=0 hot=true"}
+{"at":"2026-11-14T12:44:03.895Z","level":"info","event":"drain","detail":"install dsh-skills-manager: succeeded"}
+{"at":"2026-11-20T05:54:39.203Z","level":"info","event":"install","detail":"dsh-pet#dsh-pet: pinned to the registry's latest, 0.4.9, so pnpm's fresh-release hold cannot substitute an older version silently"}
+{"at":"2026-11-20T05:55:01.622Z","level":"info","event":"install","detail":"dsh-pet: the host's own replay activated it; adopted instead of mounting a second copy (#814, #827)"}
+{"at":"2026-11-20T05:55:01.682Z","level":"info","event":"install","detail":"dsh-pet@0.4.9 exit=0 hot=true"}
+{"at":"2026-11-20T05:55:01.726Z","level":"info","event":"drain","detail":"install dsh-pet#dsh-pet: succeeded"}
+{"at":"2026-11-20T05:58:55.050Z","level":"info","event":"toggle","detail":"dsh-whale-widget -> off: fiber=true"}
+{"at":"2026-11-20T05:58:55.058Z","level":"info","event":"toggle","detail":"dsh-whale-widget: dsh.profile.bundles removed so the official page's package switch agrees (#696)"}
+{"at":"2026-11-20T05:58:55.060Z","level":"info","event":"patch","detail":"disabled row dsh-whale-widget in ~/.dsh/profiles/web/cordis.patch.yml"}
+{"at":"2026-11-20T05:58:55.060Z","level":"info","event":"toggle","detail":"dsh-whale-widget: patch layer disabled rows dsh-whale-widget"}
+{"at":"2026-11-20T05:58:55.060Z","level":"info","event":"toggle","detail":"dsh-whale-widget: off ok=true"}
+{"at":"2026-11-20T05:58:59.514Z","level":"info","event":"restart","detail":"scheduled pid=566 helper=1216 recovery=/tmp/dsh-market-restart-2026-11-20T05-58-59.recovery.json"}
+{"at":"2026-11-20T05:59:05.737Z","level":"info","event":"toggle","detail":"dsh-whale-widget: no loader entry matched"}
+{"at":"2026-11-20T05:59:30.512Z","level":"info","event":"update-start","detail":"@michengai/dsh-im-connect -> @michengai/dsh-im-connect@1.0.46 (profile web)"}
+{"at":"2026-11-20T05:59:34.110Z","level":"info","event":"update","detail":"@michengai/dsh-im-connect: dropped 1 minimumReleaseAgeExclude row(s) for versions no longer installed"}
+{"at":"2026-11-20T05:59:34.111Z","level":"info","event":"update","detail":"@michengai/dsh-im-connect -> @michengai/dsh-im-connect@1.0.46 exit=0"}
+{"at":"2026-11-20T05:59:34.150Z","level":"info","event":"drain","detail":"update @michengai/dsh-im-connect: succeeded"}
+{"at":"2026-11-20T05:59:34.669Z","level":"info","event":"update-start","detail":"@michengai/dsh-skills-manager -> @michengai/dsh-skills-manager@1.5.0 (profile web)"}
+{"at":"2026-11-20T05:59:41.515Z","level":"info","event":"update","detail":"@michengai/dsh-skills-manager -> @michengai/dsh-skills-manager@1.5.0 exit=0"}
+{"at":"2026-11-20T05:59:41.550Z","level":"info","event":"drain","detail":"update @michengai/dsh-skills-manager: succeeded"}
+{"at":"2026-11-20T05:59:42.312Z","level":"info","event":"update-start","detail":"dsh-music-panel -> dsh-music-panel@0.39.2 (profile web)"}
+{"at":"2026-11-20T05:59:52.093Z","level":"info","event":"update","detail":"dsh-music-panel -> dsh-music-panel@0.39.2 exit=0"}
+{"at":"2026-11-20T05:59:52.139Z","level":"info","event":"drain","detail":"update dsh-music-panel: succeeded"}
+{"at":"2026-11-20T06:00:24.591Z","level":"info","event":"restart","detail":"scheduled pid=1235 helper=1903 recovery=/tmp/dsh-market-restart-2026-11-20T06-00-24.recovery.json"}
+{"at":"2026-11-20T06:00:30.670Z","level":"info","event":"toggle","detail":"dsh-whale-widget: no loader entry matched"}
+{"at":"2026-11-21T03:21:22.160Z","level":"info","event":"toggle","detail":"dsh-whale-widget: no loader entry matched"}
+{"at":"2026-11-21T03:51:51.973Z","level":"info","event":"install","detail":"dsh-cost-meter: pinned to the registry's latest, 1.9.81, so pnpm's fresh-release hold cannot substitute an older version silently"}
+{"at":"2026-11-21T03:52:00.961Z","level":"info","event":"install","detail":"dsh-cost-meter: the host's own replay activated it; adopted instead of mounting a second copy (#814, #827)"}
+{"at":"2026-11-21T03:52:01.046Z","level":"info","event":"install","detail":"dsh-cost-meter@1.9.81 exit=0 hot=true"}
+{"at":"2026-11-21T03:52:01.101Z","level":"info","event":"drain","detail":"install https://github.com/Han-1413141/dsh-cost-meter: succeeded"}
+{"at":"2026-11-21T05:52:19.031Z","level":"info","event":"toggle","detail":"dsh-whale-widget: no loader entry matched"}
