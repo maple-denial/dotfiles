@@ -22,3 +22,6 @@ source /home/maple/.config/nushell/bluefin-cli.nu # bluefin-cli shell-config
 
 # go install 安装的二进制目录（GOBIN 默认 $HOME/go/bin）
 $env.PATH = ($env.PATH | prepend ($env.HOME | path join "go" "bin"))
+
+# ls 默认使用 eza 的长格式 + 图标（nushell 内建 ls 不支持 --icons）
+alias ls = ^eza -l --icons=always

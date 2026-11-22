@@ -15,8 +15,8 @@ importers:
   .:
     dependencies:
       '@michengai/dsh-im-connect':
-        specifier: 1.0.46
-        version: 1.0.46(debug@4.4.3(supports-color@5.5.0))(supports-color@5.5.0)
+        specifier: 1.0.49
+        version: 1.0.49(debug@4.4.3(supports-color@5.5.0))(supports-color@5.5.0)
       '@michengai/dsh-skills-manager':
         specifier: 1.5.0
         version: 1.5.0
@@ -30,11 +30,14 @@ importers:
         specifier: ^0.1.5
         version: 0.1.5
       dsh-cost-meter:
-        specifier: 1.9.81
-        version: 1.9.81
+        specifier: 1.9.83
+        version: 1.9.83
       dsh-music-panel:
-        specifier: 0.39.2
-        version: 0.39.2(debug@4.4.3(supports-color@5.5.0))(supports-color@5.5.0)
+        specifier: 0.43.0
+        version: 0.43.0(debug@4.4.3(supports-color@5.5.0))(supports-color@5.5.0)
+      dsh-opencode-go:
+        specifier: 0.4.6
+        version: 0.4.6(ws@8.22.0)(zod@4.6.7)
       dsh-pet:
         specifier: 0.4.9
         version: 0.4.9(supports-color@5.5.0)(undici@7.30.1)(ws@8.22.0)
@@ -45,8 +48,8 @@ importers:
         specifier: 0.4.2
         version: 0.4.2
       dshmarket:
-        specifier: 1.73.19
-        version: 1.73.19
+        specifier: 1.77.1
+        version: 1.77.1
 
 packages:
 
@@ -54,6 +57,15 @@ packages:
     resolution: {integrity: sha512-40SXhBNvyNOAlGrroG7Is12vo4P0MNDV3GC6gaBcjoWvEbUx9CJy1KE1ZcK5XscWnYtZH/q9E4EI9QR0TYCaHQ==}
     engines: {bun: '>=0.5.0'}
     hasBin: true
+
+  '@anthropic-ai/sdk@0.129.0':
+    resolution: {integrity: sha512-MH7LB20kNpGLUpPTe2OG5XvL/KhX8HUO9XyBaFjgFk6TLS4Xjt0VPIuMKywe7POKKPslX+QxSlVok9e+8kG5Nw==}
+    hasBin: true
+    peerDependencies:
+      zod: ^3.25.0 || ^4.0.0
+    peerDependenciesMeta:
+      zod:
+        optional: true
 
   '@anthropic-ai/sdk@0.135.0':
     resolution: {integrity: sha512-WWrdL57JhU5KoynpTjt9GXK6k7ud9nPw2uw/Trn+oBXh6s0KpjhAccWZm2Qxw08ARYG1UDQj5iC+JO42j1rt/g==}
@@ -396,8 +408,8 @@ packages:
   '@matrix-org/olm@3.2.15':
     resolution: {integrity: sha512-S7lOrndAK9/8qOtaTq/WhttJC/o4GAzdfK0MUPpo8ApzsJEC0QjtwrkC3KBXdFP1cD1MXi/mlKR7aaoVMKgs6Q==}
 
-  '@michengai/dsh-im-connect@1.0.46':
-    resolution: {integrity: sha512-Q/3BnvNNuIIo0Ae7RmoDyrk4pcGdloNJNFwit4nnTewLP05J73QiyK20Q2sGopBsTlO1FKNEYs1o5oAiK7TZbQ==}
+  '@michengai/dsh-im-connect@1.0.49':
+    resolution: {integrity: sha512-zBnAUUDOlGCcj193ojC7GaspqstuT6MMFrnKuyWWdEWJqh0XIO3jCkmKLF2VY7AHhMamnClxIM4YalIuysJ80w==}
     engines: {dsh: '>=0.2.2-rc.1 <0.3.0-0', node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.2
@@ -441,6 +453,70 @@ packages:
   '@opentelemetry/api@1.10.0':
     resolution: {integrity: sha512-lMkyes8iHrG+mk6WH7X70MdCLI2RS0FwNBY1PyQ8UemaijE2m5mv5A0Niy3HtbYTFrgkUEQjFMXmSAk2hQDuPQ==}
     engines: {node: '>=8.0.0'}
+
+  '@oven/bun-darwin-aarch64@1.4.4':
+    resolution: {integrity: sha512-zW/hxwc8sJAILGwB5eTC4i48ouGXf0V4lrxmEOk3JIE6JkYVW1TZh1E2pIempqsezgW1sckTIIDudFON8bJ2Mw==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@oven/bun-darwin-x64@1.4.4':
+    resolution: {integrity: sha512-oKGcxLsvh4oHjAo28nPm8c/xN0o/OmGyj1IHYc94vprkWsW2hNg2keEZt5f40cI5Hvu4jDlSRTR0UNpv1UIAxw==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@oven/bun-freebsd-aarch64@1.4.4':
+    resolution: {integrity: sha512-klvA9FlwLxZj3JYIOPQA4bbnHIC3uas8kBE4GaGGkeVgAQP/k8hAzYkOqkSaqHBDbxLrTyFEQArEAevJq6NJzg==}
+    cpu: [arm64]
+    os: [freebsd]
+
+  '@oven/bun-freebsd-x64@1.4.4':
+    resolution: {integrity: sha512-sF1xS/scbyN94P2d0eTiarO6JHxrIvhZNT9hnWjQXW5nwKRtfuP+UYnIMNyvW1BQPcZFP/cvfLBNUIe1ea4zPA==}
+    cpu: [x64]
+    os: [freebsd]
+
+  '@oven/bun-linux-aarch64-android@1.4.4':
+    resolution: {integrity: sha512-5lvn3at5vRC0GxvmiqEiV2/e23tnRi0q5pzR40yfDvDA3OW7PSkt4chF1nA9vnAJhro4/l+ol1FmNP6D3cf/oA==}
+    cpu: [arm64]
+    os: [android]
+
+  '@oven/bun-linux-aarch64-musl@1.4.4':
+    resolution: {integrity: sha512-QFd0P+mHJxbZFbUla4MgiE5OwxysHaUIYxL2pPNkpWtaI7v4ShOpr8OhBmsuyB0xn5rv/ZJnPsj2y8+bB9+g/A==}
+    cpu: [arm64]
+    os: [linux]
+    libc: [musl]
+
+  '@oven/bun-linux-aarch64@1.4.4':
+    resolution: {integrity: sha512-ZTVtpf9zmHSBVPX1sBwe5agGb/rN34yPGg/Hby8e2Ax2uCUA2URZKlZH7qLntK7qaFJCMXh9v0GWNYN2zINz1w==}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@oven/bun-linux-x64-android@1.4.4':
+    resolution: {integrity: sha512-3dMicj9C1DhaIfDkwt/9GtpU0W+q+GazbG9OIlEyL3Q1BBEz2e6ZRz/JiO8D/ECC0caXAqvnpFudehcLlgIwWQ==}
+    cpu: [x64]
+    os: [android]
+
+  '@oven/bun-linux-x64-musl@1.4.4':
+    resolution: {integrity: sha512-lEEjNOJJrbGZu2NVcPI4uXdILcpspezWkA8R/Jr0RCGhM6zQd0Y7JBIIKNAmbX59EeWpeEz7Q78iLbpcAUypUA==}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  '@oven/bun-linux-x64@1.4.4':
+    resolution: {integrity: sha512-CHbbkmHVM28T1GFq+6GL4Ao4ujwwYwj1CxFFwEFzLanPfNsId9AhbIP0Q4reWuWBkGimUkoQygrK7Rgjtj3vog==}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@oven/bun-windows-aarch64@1.4.4':
+    resolution: {integrity: sha512-n0ep5ZRPCZY1+dqFJpnnRUZB1wy4GYU6At8RF+pyzySCLjkN9R4rFh2PtBHAgF/lg1vOl3/CeER3pDM+p40ATA==}
+    cpu: [arm64]
+    os: [win32]
+
+  '@oven/bun-windows-x64@1.4.4':
+    resolution: {integrity: sha512-a3LNctBVO8PjePsFZfwDleF2JXYf2BfQ1u/PLRnBDLnC2Riml+4+LgJpKj4xRGhB92KweGyQI5PXaTkP9qypMQ==}
+    cpu: [x64]
+    os: [win32]
 
   '@pinojs/redact@0.4.0':
     resolution: {integrity: sha512-k2ENnmBugE/rzQfEcdWHcCY+/FM3VLzH9cYEsbdsoqrvzAKRhUZeRNhAZvB8OitQJ1TBed3yqWtdjzS6wJKBwg==}
@@ -920,8 +996,8 @@ packages:
     resolution: {integrity: sha512-nI4U3TottKAcAD9LLud4Cb7b2QztQMUEfHbvhTH09bqXTxnSie8WnjPALV/WMCrJZ6UV/qHJ6L03OqO3LcdYZw==}
     engines: {node: '>=12'}
 
-  dsh-cost-meter@1.9.81:
-    resolution: {integrity: sha512-oWRVEVzkz1FwjMUSkAmo8+Y3mRYDSq/x376Ix1afgMH2mwxhZHC7wOalWjD38VAjaZVmZFQQbY0+RkEOxzU72w==}
+  dsh-cost-meter@1.9.83:
+    resolution: {integrity: sha512-iqMrUwKHRgew0o35tTICj4Rqmnw9Olis4/WgVFX8rrBWzKA2txDLR5iIDWMip8XvOXyh1rs5/N3TsBBZE8O67w==}
     engines: {dsh: '>=0.2.0-rc.1 <0.3.0-0', node: '>=20'}
     os: [darwin, linux, win32]
     hasBin: true
@@ -929,8 +1005,58 @@ packages:
       '@deepseek-ai/dsh-credentials': '>=0.2.0-rc.1 <0.3.0-0 || >=0.2.1-0 <0.3.0-0 || >=0.2.2-0 <0.3.0-0'
       '@deepseek-ai/dsh-home-paths': '>=0.2.0-rc.1 <0.3.0-0 || >=0.2.1-0 <0.3.0-0 || >=0.2.2-0 <0.3.0-0'
 
-  dsh-music-panel@0.39.2:
-    resolution: {integrity: sha512-gm5sdYRQKRp98yTPpLzWfbwxjI4hlnIzf3fkJh/F+ItuohpKc1HuYpac1eRz/i2xC0WQTBXlea/vbkE4Qt0z2A==}
+  dsh-music-panel@0.43.0:
+    resolution: {integrity: sha512-pHH4RcPJkyxM7R3RI6TiSvgAt8A5FnN2XxxAkGhC6CULTwnncvrKIT035JOeRfceMmEdlgbWsKudNdpZqh6RUA==}
+
+  dsh-opencode-go@0.4.6:
+    resolution: {integrity: sha512-OjTS9Nhisif3nw4rNvrKwcp5cudsxdlCAZbe7sarK98BfiX3rhZ7nFIvKtE9hbtnigwneo0u+r/sUsRSlLU0yQ==}
+    engines: {dsh: '>=0.2.1-rc.5', node: ^22.19.0 || >=24.0.0}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.5
+      '@deepseek-ai/dsh-api-gateway': '>=0.2.1-rc.5'
+      '@deepseek-ai/dsh-api-remotes': '>=0.2.1-rc.5'
+      '@deepseek-ai/dsh-api-settings-controller': '>=0.2.1-rc.5'
+      '@deepseek-ai/dsh-attachment': '>=0.2.1-rc.5'
+      '@deepseek-ai/dsh-brand': '>=0.2.1-rc.5'
+      '@deepseek-ai/dsh-client-locale': '>=0.2.1-rc.5'
+      '@deepseek-ai/dsh-client-store': '>=0.2.1-rc.5'
+      '@deepseek-ai/dsh-client-ui-conversation': '>=0.2.1-rc.5'
+      '@deepseek-ai/dsh-client-ui-model-selection': '>=0.2.1-rc.5'
+      '@deepseek-ai/dsh-client-ui-renderer': '>=0.2.1-rc.5'
+      '@deepseek-ai/dsh-client-ui-settings': '>=0.2.1-rc.5'
+      '@deepseek-ai/dsh-client-ui-slots': '>=0.2.1-rc.5'
+      '@deepseek-ai/dsh-credentials': '>=0.2.1-rc.5'
+      '@deepseek-ai/dsh-fs': '>=0.2.1-rc.5'
+      '@deepseek-ai/dsh-launch-environment': '>=0.2.1-rc.5'
+      '@deepseek-ai/dsh-llm': '>=0.2.1-rc.5'
+      '@deepseek-ai/dsh-settings': '>=0.2.1-rc.5'
+      '@deepseek-ai/dsh-timeout': '>=0.2.1-rc.5'
+      '@deepseek-ai/dsh-typert-protocol': '>=0.2.1-rc.5'
+      '@deepseek-ai/dsh-typert-registry': '>=0.2.1-rc.5'
+      '@deepseek-ai/schemastery': '>=3.18.5 <4'
+    peerDependenciesMeta:
+      '@deepseek-ai/dsh-api-gateway':
+        optional: true
+      '@deepseek-ai/dsh-api-remotes':
+        optional: true
+      '@deepseek-ai/dsh-api-settings-controller':
+        optional: true
+      '@deepseek-ai/dsh-client-locale':
+        optional: true
+      '@deepseek-ai/dsh-client-store':
+        optional: true
+      '@deepseek-ai/dsh-client-ui-conversation':
+        optional: true
+      '@deepseek-ai/dsh-client-ui-model-selection':
+        optional: true
+      '@deepseek-ai/dsh-client-ui-renderer':
+        optional: true
+      '@deepseek-ai/dsh-client-ui-settings':
+        optional: true
+      '@deepseek-ai/dsh-client-ui-slots':
+        optional: true
+      '@deepseek-ai/dsh-typert-registry':
+        optional: true
 
   dsh-pet@0.4.9:
     resolution: {integrity: sha512-ytcaepOCPPolB2cP09zJ3IBGCtDoVkUgfhyKXxw3q6igw8oMFYw8IKqU+PqKQegCRjTb0Yrt8yv19Eq7yC59FA==}
@@ -968,8 +1094,8 @@ packages:
   dsh-whale-widget@0.4.2:
     resolution: {integrity: sha512-aGDUfd3b2Abv4PoUn1KtnlasOIkoqgvIOR2+rAIEPDOt1qlHB7emlTq+4zdyoV5ZiicS+tkugPk86GyVUoDggQ==}
 
-  dshmarket@1.73.19:
-    resolution: {integrity: sha512-SGguYIslqf+9DeyWfm8UeM8yRpzcKhytHALp22LBBP4T4qC5BRtMOmvyt+OQvxO/VhEW4jywFZt2TBbwe7LUZg==}
+  dshmarket@1.77.1:
+    resolution: {integrity: sha512-m6TuuC+74kAz9YzwmrRwHYhBWL/uax+Ph3yQ04eJslzn6oljKebSXn6LzpIHr6VdZErT6nvbl38BgtKPWqMTgA==}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.1
       '@deepseek-ai/dsh-settings': ^0.1.0-rc.7 || ^0.1.1-rc.2 || ^0.1.2-alpha.2 || ^0.2.0-rc.1 || ^0.2.1-alpha.3 || ^0.2.1-rc.1
@@ -1613,6 +1739,30 @@ packages:
   only@0.0.2:
     resolution: {integrity: sha512-Fvw+Jemq5fjjyWz6CpKx6w9s7xxqo3+JCyM0WXWeCSOboZ8ABkyvP8ID4CZuChA/wxSx+XSJmdOm8rGVyJ1hdQ==}
 
+  openai@7.19.0:
+    resolution: {integrity: sha512-MX2s3u2L5racTO0CC/SWpCOasJQBCJrqLKXK+l82cAhdeF8mPMBEe/gxMm0ZFa2xpKpOFLRjxv5afYEZbBXmbQ==}
+    engines: {node: '>=22.0.0'}
+    peerDependencies:
+      '@aws-sdk/credential-provider-node': '>=3.972.0 <4'
+      '@smithy/hash-node': '>=4.3.0 <5'
+      '@smithy/signature-v4': '>=5.4.0 <6'
+      undici: '>=5 <9'
+      ws: ^8.21.0
+      zod: ^3.25 || ^4.0
+    peerDependenciesMeta:
+      '@aws-sdk/credential-provider-node':
+        optional: true
+      '@smithy/hash-node':
+        optional: true
+      '@smithy/signature-v4':
+        optional: true
+      undici:
+        optional: true
+      ws:
+        optional: true
+      zod:
+        optional: true
+
   openai@7.39.0:
     resolution: {integrity: sha512-iEA9ndbrj32vhYZwJg2v9BQVuztGUOb2SBQU16ZcWNkQHWEBjtarxjqR9c6d5PbWMG0Eyfhk66OZ0iJ8XpFjyw==}
     engines: {node: '>=22.0.0'}
@@ -2107,8 +2257,16 @@ packages:
     resolution: {integrity: sha512-EvRlUt/QqAEvXdQeRMYUfwOQsfzpDztykrG2owGEE/rBOBoYv9uF39ZzsNDh4lTFHhTr2XOZjKkYgueD12ZmGA==}
     engines: {node: '>=18.17'}
 
+  undici@7.30.0:
+    resolution: {integrity: sha512-dkrQXeHSaoamnItlYbmzG0wFYrM0ZwDxCIg0A7aKjTyyhh9svRzCNFEzV+Vm05/yehjCzjDZ31KXfGEjYSztDQ==}
+    engines: {node: '>=20.18.1'}
+
   undici@7.30.1:
     resolution: {integrity: sha512-03KrMbjIFDWQR5RNPrSw3bd1r12JpyFQl9/yxjUbJtqkjmllqC5lFjZh6ujeuJCKr8EOQvRW872Oy/az+nLYxg==}
+    engines: {node: '>=20.18.1'}
+
+  undici@7.30.2:
+    resolution: {integrity: sha512-mLyPQnHwUxaM/rideoK/+KL8DaAJLRl4aBCfmX444aCSLnIaomqPLtNRe2jdCYcsk5wZzXrDIQC8ZeYNRAYyIA==}
     engines: {node: '>=20.18.1'}
 
   universalify@0.2.0:
@@ -2287,6 +2445,13 @@ snapshots:
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
+
+  '@anthropic-ai/sdk@0.129.0(zod@4.6.7)':
+    dependencies:
+      json-schema-to-ts: 3.1.1
+      standardwebhooks: 1.3.0
+    optionalDependencies:
+      zod: 4.6.7
 
   '@anthropic-ai/sdk@0.135.0(zod@4.6.7)':
     dependencies:
@@ -2710,7 +2875,7 @@ snapshots:
 
   '@larksuiteoapi/node-sdk@1.76.0(debug@4.4.3(supports-color@5.5.0))(supports-color@5.5.0)':
     dependencies:
-      axios: 1.20.0(debug@4.4.3(supports-color@5.5.0))(supports-color@5.5.0)
+      axios: 1.21.1(debug@4.4.3(supports-color@5.5.0))(supports-color@5.5.0)
       lodash.identity: 3.0.0
       lodash.merge: 4.6.2
       lodash.pickby: 4.6.0
@@ -2725,7 +2890,7 @@ snapshots:
 
   '@matrix-org/olm@3.2.15': {}
 
-  '@michengai/dsh-im-connect@1.0.46(debug@4.4.3(supports-color@5.5.0))(supports-color@5.5.0)':
+  '@michengai/dsh-im-connect@1.0.49(debug@4.4.3(supports-color@5.5.0))(supports-color@5.5.0)':
     dependencies:
       '@larksuiteoapi/node-sdk': 1.76.0(debug@4.4.3(supports-color@5.5.0))(supports-color@5.5.0)
       '@tencent-connect/qqbot-connector': 1.2.0
@@ -2781,6 +2946,42 @@ snapshots:
       - supports-color
 
   '@opentelemetry/api@1.10.0': {}
+
+  '@oven/bun-darwin-aarch64@1.4.4':
+    optional: true
+
+  '@oven/bun-darwin-x64@1.4.4':
+    optional: true
+
+  '@oven/bun-freebsd-aarch64@1.4.4':
+    optional: true
+
+  '@oven/bun-freebsd-x64@1.4.4':
+    optional: true
+
+  '@oven/bun-linux-aarch64-android@1.4.4':
+    optional: true
+
+  '@oven/bun-linux-aarch64-musl@1.4.4':
+    optional: true
+
+  '@oven/bun-linux-aarch64@1.4.4':
+    optional: true
+
+  '@oven/bun-linux-x64-android@1.4.4':
+    optional: true
+
+  '@oven/bun-linux-x64-musl@1.4.4':
+    optional: true
+
+  '@oven/bun-linux-x64@1.4.4':
+    optional: true
+
+  '@oven/bun-windows-aarch64@1.4.4':
+    optional: true
+
+  '@oven/bun-windows-x64@1.4.4':
+    optional: true
 
   '@pinojs/redact@0.4.0': {}
 
@@ -2885,7 +3086,7 @@ snapshots:
 
   '@wecom/aibot-node-sdk@1.0.7(debug@4.4.3(supports-color@5.5.0))(supports-color@5.5.0)':
     dependencies:
-      axios: 1.20.0(debug@4.4.3(supports-color@5.5.0))(supports-color@5.5.0)
+      axios: 1.21.1(debug@4.4.3(supports-color@5.5.0))(supports-color@5.5.0)
       eventemitter3: 5.0.4
       ws: 8.22.0
     transitivePeerDependencies:
@@ -3255,7 +3456,7 @@ snapshots:
 
   dingtalk-stream@2.1.5(supports-color@5.5.0):
     dependencies:
-      axios: 1.20.0(debug@4.4.3(supports-color@5.5.0))(supports-color@5.5.0)
+      axios: 1.21.1(debug@4.4.3(supports-color@5.5.0))(supports-color@5.5.0)
       debug: 4.4.3(supports-color@5.5.0)
       ws: 8.22.0
     transitivePeerDependencies:
@@ -3285,12 +3486,12 @@ snapshots:
 
   dotenv@17.4.2: {}
 
-  dsh-cost-meter@1.9.81:
+  dsh-cost-meter@1.9.83:
     dependencies:
       acorn: 8.15.0
       zod: 4.6.6
 
-  dsh-music-panel@0.39.2(debug@4.4.3(supports-color@5.5.0))(supports-color@5.5.0):
+  dsh-music-panel@0.43.0(debug@4.4.3(supports-color@5.5.0))(supports-color@5.5.0):
     dependencies:
       '@neteasecloudmusicapienhanced/api': 4.41.1(debug@4.4.3(supports-color@5.5.0))(supports-color@5.5.0)
       '@yakult-green-tea/qq-music-api': 3.3.6(debug@4.4.3(supports-color@5.5.0))(supports-color@5.5.0)
@@ -3322,6 +3523,31 @@ snapshots:
       - supports-color
       - utf-8-validate
 
+  dsh-opencode-go@0.4.6(ws@8.22.0)(zod@4.6.7):
+    dependencies:
+      '@anthropic-ai/sdk': 0.129.0(zod@4.6.7)
+      openai: 7.19.0(undici@7.30.0)(ws@8.22.0)(zod@4.6.7)
+      undici: 7.30.0
+    optionalDependencies:
+      '@oven/bun-darwin-aarch64': 1.4.4
+      '@oven/bun-darwin-x64': 1.4.4
+      '@oven/bun-freebsd-aarch64': 1.4.4
+      '@oven/bun-freebsd-x64': 1.4.4
+      '@oven/bun-linux-aarch64': 1.4.4
+      '@oven/bun-linux-aarch64-android': 1.4.4
+      '@oven/bun-linux-aarch64-musl': 1.4.4
+      '@oven/bun-linux-x64': 1.4.4
+      '@oven/bun-linux-x64-android': 1.4.4
+      '@oven/bun-linux-x64-musl': 1.4.4
+      '@oven/bun-windows-aarch64': 1.4.4
+      '@oven/bun-windows-x64': 1.4.4
+    transitivePeerDependencies:
+      - '@aws-sdk/credential-provider-node'
+      - '@smithy/hash-node'
+      - '@smithy/signature-v4'
+      - ws
+      - zod
+
   dsh-pet@0.4.9(supports-color@5.5.0)(undici@7.30.1)(ws@8.22.0):
     dependencies:
       '@andresaya/edge-tts': 1.9.1
@@ -3344,10 +3570,10 @@ snapshots:
 
   dsh-whale-widget@0.4.2: {}
 
-  dshmarket@1.73.19:
+  dshmarket@1.77.1:
     dependencies:
       js-yaml: 4.3.2
-      undici: 7.30.1
+      undici: 7.30.2
 
   dunder-proto@1.0.1:
     dependencies:
@@ -4122,6 +4348,12 @@ snapshots:
 
   only@0.0.2: {}
 
+  openai@7.19.0(undici@7.30.0)(ws@8.22.0)(zod@4.6.7):
+    optionalDependencies:
+      undici: 7.30.0
+      ws: 8.22.0
+      zod: 4.6.7
+
   openai@7.39.0(undici@7.30.1)(ws@8.22.0)(zod@4.6.7):
     optionalDependencies:
       undici: 7.30.1
@@ -4683,7 +4915,11 @@ snapshots:
 
   undici@6.29.1: {}
 
+  undici@7.30.0: {}
+
   undici@7.30.1: {}
+
+  undici@7.30.2: {}
 
   universalify@0.2.0: {}
 

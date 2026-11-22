@@ -13,3 +13,18 @@
 
 # bluefin-cli 遥测计数（运行时数据，不同步）
 .config/bluefin-cli/countme.json
+
+# DSH 运行时数据：会话/缓存/附件/日志/安装器与市场缓存，机器相关且体积大
+.dsh/sessions/
+.dsh/cache/
+.dsh/attachments/
+.dsh/logs/
+.dsh/electron/
+.dsh/dsh-pet/
+.dsh/music/
+.dsh/llm-deepseek/
+.dsh/integrations/
+.dsh/profiles/*/.dsh-market/
+.dsh/profiles/*/.plugin-manager/
+.dsh/.dshw-*
+.dsh/settings.yaml.imported
